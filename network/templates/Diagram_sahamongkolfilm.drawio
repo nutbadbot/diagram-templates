@@ -1,0 +1,194 @@
+<mxfile host="Electron">
+  <diagram name="หน้า-1" id="aGF0yBFclhG1dM-Qon3Z">
+    <mxGraphModel dx="1488" dy="936" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;fontSize=16;fontStyle=1;strokeColor=none;fillColor=none;" value="Network Diagram" vertex="1">
+          <mxGeometry height="28" width="807" x="10" y="8" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_isp" parent="1" style="swimlane;startSize=22;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=10;html=1;" value="Internet / ISP" vertex="1">
+          <mxGeometry height="68" width="807" x="10" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="isp1" parent="zone_isp" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="ISP" vertex="1">
+          <mxGeometry height="40" width="140" x="314" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_fw" parent="1" style="swimlane;startSize=22;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=10;html=1;" value="Security Layer — FortiGate (เลือก 1 รุ่น)" vertex="1">
+          <mxGeometry height="175" width="807" x="10" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="compare_box" parent="zone_fw" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="142" width="534" x="126" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="compare_title" parent="zone_fw" style="text;html=1;fontSize=9;fontStyle=3;align=center;strokeColor=none;fillColor=none;fontColor=#996600;" value="เปรียบเทียบรุ่น — เลือกรุ่นใดรุ่นหนึ่ง" vertex="1">
+          <mxGeometry height="16" width="240" x="270" y="22" as="geometry" />
+        </mxCell>
+        <mxCell id="fw70g" parent="zone_fw" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#AE4132;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.security.firewall;fontSize=9;" value="FortiGate 70G" vertex="1">
+          <mxGeometry height="48" width="40" x="215" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fw70g_badge" parent="zone_fw" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;fontStyle=1;fontColor=#b85450;" value="Uplink → Core: 1G" vertex="1">
+          <mxGeometry height="22" width="130" x="170" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="fw70g_note" parent="zone_fw" style="text;html=1;fontSize=8;align=left;strokeColor=none;fillColor=none;" value="• 1G Uplink&lt;br&gt;• ราคาประหยัดกว่า&lt;br&gt;• เหมาะสำนักงานขนาดเล็ก-กลาง" vertex="1">
+          <mxGeometry height="50" width="170" x="155" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="fw90g" parent="zone_fw" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#6d1f1f;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.security.firewall;fontSize=9;" value="FortiGate 90G" vertex="1">
+          <mxGeometry height="48" width="40" x="520" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="fw90g_badge" parent="zone_fw" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1;fontColor=#2d6a2d;" value="Uplink → Core: 10G" vertex="1">
+          <mxGeometry height="22" width="130" x="478" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="fw90g_note" parent="zone_fw" style="text;html=1;fontSize=8;align=left;strokeColor=none;fillColor=none;" value="• SFP+ 10G Uplink&#xa;• รองรับ throughput สูงกว่า&#xa;• เหมาะสำนักงานขนาดกลาง-ใหญ่" vertex="1">
+          <mxGeometry height="50" width="180" x="463" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_core" parent="1" style="swimlane;startSize=22;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=10;html=1;" value="Core Layer — RG-NBS5200-24GT4XS (L3 Switch) + Cisco SG200 ×11" vertex="1">
+          <mxGeometry height="195" width="807" x="10" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="core_sw" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_3_switch;fontSize=9;" value="RG-NBS5200-24GT4XS&#xa;Core Switch L3" vertex="1">
+          <mxGeometry height="52" width="52" x="365" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sg1" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #1" vertex="1">
+          <mxGeometry height="34" width="68" x="14" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg2" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #2" vertex="1">
+          <mxGeometry height="34" width="68" x="86" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg3" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #3" vertex="1">
+          <mxGeometry height="34" width="68" x="158" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg4" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #4" vertex="1">
+          <mxGeometry height="34" width="68" x="230" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg5" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #5" vertex="1">
+          <mxGeometry height="34" width="68" x="302" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg6" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #6" vertex="1">
+          <mxGeometry height="34" width="68" x="374" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg7" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #7" vertex="1">
+          <mxGeometry height="34" width="68" x="446" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg8" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #8" vertex="1">
+          <mxGeometry height="34" width="68" x="518" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg9" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #9" vertex="1">
+          <mxGeometry height="34" width="68" x="590" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg10" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #10" vertex="1">
+          <mxGeometry height="34" width="68" x="662" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="sg11" parent="zone_core" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#647687;strokeWidth=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=8;" value="SG200 #11" vertex="1">
+          <mxGeometry height="34" width="68" x="734" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ec1" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec2" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec3" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec4" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec5" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec6" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec7" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec8" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec9" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec10" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ec11" edge="1" parent="zone_core" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=1;strokeColor=#647687;dashed=1;" target="sg11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_access" parent="1" style="swimlane;startSize=22;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;html=1;" value="Access Layer — RG-NBS3300-16MG4XS-HP (PoE++ Switch)" vertex="1">
+          <mxGeometry height="102" width="807" x="10" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="access_sw" parent="zone_access" style="strokeColor=#ffffff;sketch=0;html=1;dashed=0;fillColor=#9673a6;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.switches.layer_2_remote_switch;fontSize=9;" value="RG-NBS3300-16MG4XS-HP&#xa;Access Switch / PoE++" vertex="1">
+          <mxGeometry height="46" width="154" x="313" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_wireless" parent="1" style="swimlane;startSize=22;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=10;html=1;" value="Wireless Zone — Access Points (via PoE++)" vertex="1">
+          <mxGeometry height="115" width="810" x="7" y="631" as="geometry" />
+        </mxCell>
+        <mxCell id="ap_ceil" parent="zone_wireless" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#036897;strokeColor=#ffffff;fontColor=#ffffff;fontSize=9;fontStyle=1;" value="RG-RAP73Pro&#xa;AP ติดเพดาน × 9" vertex="1">
+          <mxGeometry height="46" width="155" x="80" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="ap_wall" parent="zone_wireless" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9673a6;strokeColor=#ffffff;fontColor=#ffffff;fontSize=9;fontStyle=1;" value="RG-RAP72-Wall&#xa;AP ติดผนัง × 2" vertex="1">
+          <mxGeometry height="46" width="155" x="544" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="zone_clients" parent="1" style="swimlane;startSize=22;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=10;html=1;fontColor=#333333;" value="End Devices — Wireless Clients" vertex="1">
+          <mxGeometry height="105" width="811" x="6" y="757" as="geometry" />
+        </mxCell>
+        <mxCell id="cl1" parent="zone_clients" style="shape=mxgraph.cisco19.rect;prIcon=dual_mode_access_point;sketch=0;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalLabelPosition=bottom;verticalAlign=top;align=center;aspect=fixed;fontSize=9;" value="Smartphones / Tablets&#xa;(Wireless)" vertex="1">
+          <mxGeometry height="40" width="52" x="65" y="27" as="geometry" />
+        </mxCell>
+        <mxCell id="cl2" parent="zone_clients" style="shape=mxgraph.cisco19.rect;prIcon=dual_mode_access_point;sketch=0;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalLabelPosition=bottom;verticalAlign=top;align=center;aspect=fixed;fontSize=9;" value="Laptops / PCs&#xa;(Wireless)" vertex="1">
+          <mxGeometry height="40" width="52" x="189" y="27" as="geometry" />
+        </mxCell>
+        <mxCell id="cl3" parent="zone_clients" style="shape=mxgraph.cisco19.rect;prIcon=dual_mode_access_point;sketch=0;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalLabelPosition=bottom;verticalAlign=top;align=center;aspect=fixed;fontSize=9;" value="Devices (Wall AP)&#xa;(Wireless)" vertex="1">
+          <mxGeometry height="40" width="52" x="596.5" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="e_isp_fw70" edge="1" parent="1" source="isp1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d6b656;" target="fw70g" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_isp_fw90" edge="1" parent="1" source="isp1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#d6b656;" target="fw90g" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fw70_core" edge="1" parent="1" source="fw70g" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#b85450;fontStyle=1;fontSize=9;" target="core_sw" value="1G">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fw90_core" edge="1" parent="1" source="vs_label" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;strokeColor=#00AA00;fontStyle=1;fontSize=9;" target="core_sw" value="10G">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_core_access" edge="1" parent="1" source="core_sw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;strokeColor=#00AA00;" target="access_sw" value="1G">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_access_ceil" edge="1" parent="1" source="access_sw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#036897;" target="ap_ceil" value="2.5G PoE++">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_access_wall" edge="1" parent="1" source="access_sw" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;strokeColor=#9673a6;" target="ap_wall" value="PoE++">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ceil_cl1" edge="1" parent="1" source="ap_ceil" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=1;strokeColor=#FF8000;dashed=1;" target="cl1" value="WiFi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="168" y="734" />
+              <mxPoint x="97" y="734" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ceil_cl2" edge="1" parent="1" source="ap_ceil" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=1;strokeColor=#FF8000;dashed=1;" target="cl2" value="WiFi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="168" y="734" />
+              <mxPoint x="221" y="734" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_wall_cl3" edge="1" parent="1" source="ap_wall" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=1;strokeColor=#FF8000;dashed=1;" target="cl3" value="WiFi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vs_label" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;fontColor=#333333;" value="VS" vertex="1">
+          <mxGeometry height="36" width="36" x="383" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="gfEDcqFvNOgs15KO_Ouu-1" edge="1" parent="1" source="fw90g" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=3;strokeColor=#00AA00;fontStyle=1;fontSize=9;" target="vs_label" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="193" as="sourcePoint" />
+            <mxPoint x="401" y="334" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
