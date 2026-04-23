@@ -1,5 +1,3 @@
-# Prompt Templates
-รวม prompt สำเร็จรูปสำหรับสร้าง diagram
 # Prompt Templates สำหรับ Claude
 
 ## 1. สร้าง Network Diagram จากรายการอุปกรณ์
