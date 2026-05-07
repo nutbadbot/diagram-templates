@@ -5,7 +5,7 @@ Template สำหรับ network topology, infrastructure diagram, rack diagr
 
 ---
 
-## Templates ปัจจุบัน (8 templates)
+## Templates ปัจจุบัน (9 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
@@ -17,6 +17,7 @@ Template สำหรับ network topology, infrastructure diagram, rack diagr
 | [hyper-v-failover-cluster.md](hyper-v-failover-cluster.md) | Hyper-V Failover Cluster 2+ nodes, CSV, Live Migration | ✅ |
 | [backup-architecture.md](backup-architecture.md) | Enterprise Backup — Veeam/Commvault, 3-2-1 rule | ✅ |
 | [vlan-segmentation.md](vlan-segmentation.md) | VLAN design, inter-VLAN routing, zone isolation | ✅ |
+| [rack-elevation-42u.md](rack-elevation-42u.md) | 42U rack layout, front view, U position, BOM | ✅ |
 
 ---
 
@@ -48,6 +49,7 @@ github.com/nutbadbot/diagram-templates
 | End Devices | `#1a1a1a` | `#424242` |
 | Cluster Node (Active) | `#2d1a4a` | `#9c27b0` |
 | Cluster Node (Standby) | `#1a2a1a` | `#388e3c` |
+| Power / UPS | `#2a1a0a` | `#ff6600` |
 | LACP Link | — | `#2e7d32` (หนา 3px) |
 | Live Migration / HA | — | `#00bcd4` (เส้นประ) |
 | Backup / Archive | — | `#ff9800` (เส้นประ) |
@@ -65,13 +67,13 @@ github.com/nutbadbot/diagram-templates
 | แสดง Hyper-V HA cluster | `hyper-v-failover-cluster.md` |
 | ออกแบบ backup topology | `backup-architecture.md` |
 | ออกแบบ VLAN + security zone | `vlan-segmentation.md` |
+| วาง layout อุปกรณ์ใน rack | `rack-elevation-42u.md` |
 
 ---
 
 ## จะเพิ่ม (Roadmap)
 
 - [ ] `spine-leaf-fabric.md` — Modern DC Spine-Leaf
-- [ ] `rack-elevation-42u.md` — 42U rack layout
 - [ ] `voip-deployment.md` — VoIP deployment (Cisco/Avaya)
 
 ## อยากเพิ่ม template ใหม่?

@@ -4,7 +4,7 @@
 
 [![Made with Claude](https://img.shields.io/badge/Made%20with-Claude-D97757)](https://claude.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/Templates-10-blue)](#)
+[![Templates](https://img.shields.io/badge/Templates-13-blue)](#)
 [![Style](https://img.shields.io/badge/Style-Pragma%20Dark-1a1a2e)](#)
 
 ---
@@ -15,7 +15,7 @@
 
 - 🌐 **Network & Infrastructure** — network topology, rack diagrams, firewall zones, Hyper-V, backup, VLAN
 - 🏛️ **System Architecture** — application architecture, cloud architecture, microservices
-- 🔄 **Process & Workflow** — business process flow, approval flow, deployment pipeline
+- 🔄 **Process & Workflow** — business process flow, CI/CD pipeline, incident response
 
 Template ทุกตัวมี **Pragma Style** (dark theme + Cisco icons + layer bars) พร้อม **Draw.io XML** และ **Mermaid** ที่ Claude เอาไปปรับแก้ได้ทันที
 
@@ -40,9 +40,9 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 
 ---
 
-## 📂 Templates ทั้งหมด (10 templates)
+## 📂 Templates ทั้งหมด (13 templates)
 
-### 🌐 Network & Infrastructure (8 templates)
+### 🌐 Network & Infrastructure (9 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
@@ -54,6 +54,7 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 | [hyper-v-failover-cluster.md](templates/network-infrastructure/hyper-v-failover-cluster.md) | Hyper-V Failover Cluster 2+ nodes, CSV, Live Migration | ✅ |
 | [backup-architecture.md](templates/network-infrastructure/backup-architecture.md) | Enterprise Backup — Veeam/Commvault, 3-2-1 rule | ✅ |
 | [vlan-segmentation.md](templates/network-infrastructure/vlan-segmentation.md) | VLAN design, inter-VLAN routing, zone isolation | ✅ |
+| [rack-elevation-42u.md](templates/network-infrastructure/rack-elevation-42u.md) | 42U rack layout, front view, U position, BOM | ✅ |
 
 ### 🏛️ System Architecture (1 template)
 
@@ -61,17 +62,19 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 |---|---|---|
 | [3-tier-web-app.md](templates/system-architecture/3-tier-web-app.md) | Traditional web app (Presentation/App/Data) | ✅ |
 
-### 🔄 Process & Workflow (1 template)
+### 🔄 Process & Workflow (3 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
 | [approval-workflow.md](templates/process-flow/approval-workflow.md) | Generic approval workflow (swimlane) | 🔜 |
+| [cicd-pipeline.md](templates/process-flow/cicd-pipeline.md) | CI/CD pipeline — Build, Test, Deploy to production | ✅ |
+| [incident-response.md](templates/process-flow/incident-response.md) | Incident response — Detect, Triage, DR, Post-mortem | ✅ |
 
 ---
 
 ## 🎨 Pragma Style
 
-ทุก Network template ใช้ **Pragma Dark Style** มาตรฐาน:
+ทุก template ใช้ **Pragma Dark Style** มาตรฐาน:
 
 | Layer | สี | อุปกรณ์ |
 |---|---|---|
@@ -82,7 +85,7 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 | Wireless | ฟ้าอ่อน | WiFi AP, Controller |
 | Storage | เหลืองเข้ม | SAN, NAS, CSV |
 | End Devices | เทาเข้ม | PC, Laptop, Phone |
-| Power | เทาเข้ม | UPS |
+| Power | ส้ม | UPS, PDU |
 
 ---
 
@@ -94,9 +97,9 @@ diagram-templates/
 ├── MANUAL.md                         ← คู่มือหลัก — อ่านก่อนใช้
 ├── CONTRIBUTING.md                   ← วิธีเพิ่ม template ใหม่
 ├── templates/
-│   ├── network-infrastructure/       ← 8 templates ✅ Pragma Style
+│   ├── network-infrastructure/       ← 9 templates ✅ Pragma Style
 │   ├── system-architecture/          ← 1 template ✅ Pragma Style
-│   └── process-flow/                 ← 1 template
+│   └── process-flow/                 ← 3 templates (2 ✅, 1 🔜)
 ├── docs/
 │   ├── setup-claude.md               ← setup Claude + connectors
 │   ├── prompt-library.md             ← prompt ที่ใช้ได้ผลจริง
@@ -123,7 +126,6 @@ diagram-templates/
 
 ### Network & Infrastructure
 - [ ] `spine-leaf-fabric.md` — Modern DC Spine-Leaf topology
-- [ ] `rack-elevation-42u.md` — 42U rack diagram
 - [ ] `voip-deployment.md` — VoIP deployment
 
 ### System Architecture
@@ -132,8 +134,7 @@ diagram-templates/
 - [ ] `serverless-aws.md` — Serverless (Lambda + API GW + DynamoDB)
 
 ### Process & Workflow
-- [ ] `cicd-pipeline.md` — CI/CD pipeline
-- [ ] `incident-response.md` — Incident response process
+- [ ] `approval-workflow.md` — เพิ่ม Pragma Style (ยังเป็น 🔜)
 
 ---
 

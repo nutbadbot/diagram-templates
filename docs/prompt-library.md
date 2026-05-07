@@ -400,3 +400,60 @@ Copy แล้วเติมช่องว่าง:
 **เพิ่ม prompt ใหม่**: Contribute ผ่าน Pull Request ที่ [repo นี้](https://github.com/nutbadbot/diagram-templates)
 
 **อัพเดตล่าสุด**: 2026-05-07 — เพิ่ม N4 Hyper-V, N5 Backup, N6 VLAN, อัปเดต A1 ให้ใช้ template repo
+
+
+#### N7: Rack Elevation 42U
+
+```
+ช่วยหา template rack-elevation-42u.md จาก
+github.com/nutbadbot/diagram-templates
+แล้วสร้าง rack diagram สำหรับ [ชื่อลูกค้า]:
+
+BOM:
+- Firewall: [model] x[จำนวน] ([1U/2U])
+- Core Switch: [model] x[จำนวน] ([1U/2U])
+- Access Switch: [model] x[จำนวน] ([1U])
+- Server: [model] x[จำนวน] ([2U/4U])
+- Storage: [model] x[จำนวน] ([2U/4U])
+- UPS: [model] x[จำนวน] ([2U/3U])
+- Patch Panel: [จำนวน] x 1U
+- Cable Manager: ทุก 4U
+
+แสดง U position + legend + rack summary
+```
+
+---
+
+#### P3: CI/CD Pipeline
+
+```
+ช่วยหา template cicd-pipeline.md จาก
+github.com/nutbadbot/diagram-templates
+ปรับสำหรับ [ชื่อ project]:
+- Source: [GitHub / GitLab / Bitbucket]
+- CI tool: [GitHub Actions / GitLab CI / Jenkins]
+- Build: [Docker / Maven / npm]
+- Registry: [ECR / GHCR / Harbor]
+- Staging: [K8s / ECS / VM]
+- Production: [K8s / ECS / VM]
+- Approval: [required / auto]
+- Notify: [Teams / Slack / PagerDuty]
+- Security scan: [Trivy / Snyk / ไม่มี]
+```
+
+---
+
+#### P4: Incident Response
+
+```
+ช่วยหา template incident-response.md จาก
+github.com/nutbadbot/diagram-templates
+ปรับสำหรับ [ชื่อองค์กร]:
+- Monitoring: [Zabbix / Prometheus / Veeam ONE]
+- Ticketing: [ServiceNow / Jira / Freshdesk]
+- Alert: [Teams / Slack / PagerDuty]
+- Severity levels: [SEV1-4 / P0-P4]
+- DR tool: [Veeam / Hyper-V Failover / VMware SRM]
+- RTO target: [X ชั่วโมง]
+- RPO target: [Y ชั่วโมง]
+```
