@@ -13,7 +13,7 @@
 
 เป็นคลังกลางที่เก็บ **diagram templates** ที่ทีม Pragma ใช้งานบ่อย โดยแบ่งเป็น 3 หมวดหลัก:
 
-- 🌐 **Network & Infrastructure** — network topology, rack diagrams, firewall zones
+- 🌐 **Network & Infrastructure** — network topology, rack diagrams, firewall zones, Hyper-V, backup, VLAN
 - 🏛️ **System Architecture** — application architecture, cloud architecture, microservices
 - 🔄 **Process & Workflow** — business process flow, approval flow, deployment pipeline
 
@@ -80,6 +80,7 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 | Core | เขียวเข้ม | L3 Switch, Core Switch |
 | Access | ม่วงเข้ม | L2 Switch, PoE Switch |
 | Wireless | ฟ้าอ่อน | WiFi AP, Controller |
+| Storage | เหลืองเข้ม | SAN, NAS, CSV |
 | End Devices | เทาเข้ม | PC, Laptop, Phone |
 | Power | เทาเข้ม | UPS |
 

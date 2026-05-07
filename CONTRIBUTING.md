@@ -12,7 +12,7 @@ Template ของคุณเข้าข่ายหมวดไหน?
 
 | หมวด | ตัวอย่าง |
 |---|---|
-| `network-infrastructure/` | network topology, rack, firewall zone, SD-WAN |
+| `network-infrastructure/` | network topology, rack, firewall zone, SD-WAN, Hyper-V, backup, VLAN |
 | `system-architecture/` | microservices, 3-tier app, cloud (AWS/Azure) |
 | `process-flow/` | business workflow, approval, CI/CD pipeline |
 
@@ -24,8 +24,8 @@ Format: `[ชื่อสั้นๆ-อธิบาย].md`
 
 ✅ ดี:
 - `3-tier-data-center.md`
-- `aws-microservices-basic.md`
-- `firewall-dmz-standard.md`
+- `hyper-v-failover-cluster.md`
+- `backup-architecture.md`
 
 ❌ ไม่ดี:
 - `template1.md`
@@ -46,43 +46,44 @@ Format: `[ชื่อสั้นๆ-อธิบาย].md`
 - เหมาะสำหรับ...
 - **ไม่เหมาะกับ**: ...
 
-## 🖼️ Preview
-(แนบรูป preview ถ้าได้)
-
-## 📝 Draw.io XML
+## 🎨 Pragma Style Diagram (Draw.io XML)
 
 ```xml
-<mxfile>
-<!-- XML ที่นี่ -->
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="...">
+    <mxGraphModel background="#1a1a2e">
+      <!-- XML ที่นี่ — ต้องใช้ Pragma Dark Style -->
+    </mxGraphModel>
+  </diagram>
 </mxfile>
 ```
 
-## 🌊 Mermaid version (ถ้ามี)
+## 🌊 Mermaid Template
 
 ```mermaid
-graph TD
+flowchart TB
   A --> B
 ```
 
-## 💡 Prompt ตัวอย่างสำหรับใช้กับ Claude
+## 💡 Prompt ตัวอย่าง
 
 ```
-นี่คือ template [ชื่อ]:
-[paste XML/Mermaid]
-
-ช่วยปรับให้เป็น...
+ใช้ template [ชื่อ].md แบบ Pragma Style
+ปรับสำหรับ [ลูกค้า]:
+- [spec 1]
+- [spec 2]
 ```
 
-## 🔧 Parameters ที่ควรปรับ
+## 🔧 Parameters ที่ปรับได้
 
-| Parameter | Default | ความหมาย |
+| Parameter | Default | ทางเลือก |
 |---|---|---|
 | ... | ... | ... |
 
 ## 📌 Notes
 
 - ข้อควรระวัง
-- เคสพิเศษ
+- Related templates
 ````
 
 ### 4. Submit ผ่าน Git
@@ -117,20 +118,24 @@ git push origin add-template-xxx
 ## ✅ Checklist ก่อน Submit
 
 - [ ] ไฟล์อยู่ในหมวดที่ถูกต้อง
-- [ ] ชื่อไฟล์ตาม format
-- [ ] มี "ใช้ตอนไหน" ครบถ้วน
-- [ ] มี Draw.io XML (อย่างน้อย 1 format)
-- [ ] มี prompt ตัวอย่าง
+- [ ] ชื่อไฟล์ตาม format (kebab-case, ภาษาอังกฤษ)
+- [ ] มีส่วน "ใช้ตอนไหน" พร้อม ✅ และ ❌
+- [ ] **ใช้ Pragma Dark Style** — background `#1a1a2e`, layer swimlanes, Cisco icons
+- [ ] Draw.io XML ทดสอบเปิดใน Draw.io แล้วแสดงผลถูกต้อง
+- [ ] มี Mermaid version (quick reference)
+- [ ] มี prompt ตัวอย่างอย่างน้อย 1 แบบ
+- [ ] มีตาราง Parameters ที่ปรับได้
+- [ ] มี Related Templates ใน Notes
 - [ ] **ไม่มีข้อมูลลูกค้า/ข้อมูลลับ** (IP จริง, ชื่อบริษัทลูกค้า, credentials)
-- [ ] ทดสอบแล้วเปิดใน Draw.io ได้
 
 ---
 
 ## ⚠️ ข้อห้าม
 
-- ❌ ไม่ใส่ข้อมูลลูกค้าจริง (ชื่อ, IP, credentials)
+- ❌ ไม่ใส่ข้อมูลลูกค้าจริง (ชื่อ, IP จริง, credentials)
 - ❌ ไม่ใส่ไฟล์ binary ขนาดใหญ่ (>5MB) — ใช้ external link
 - ❌ ไม่ copy template จากที่อื่นโดยไม่มี attribution
+- ❌ ไม่ใช้ light theme (white background) — ทุก template ต้องเป็น Pragma Dark Style
 
 ---
 
@@ -138,5 +143,6 @@ git push origin add-template-xxx
 
 1. **Generalization**: ปรับใช้ได้กับหลาย use case
 2. **Documentation**: มีคำอธิบายครบ ไม่ต้องถามทีมเพิ่ม
-3. **Best practices**: สะท้อน standard ของทีม Pragma
-4. **Tested**: ลองใช้จริงกับ Claude แล้วได้ผลดี
+3. **Pragma Style**: dark theme สม่ำเสมอทุก template
+4. **Best practices**: สะท้อน standard ของทีม Pragma
+5. **Tested**: ลองใช้จริงกับ Claude แล้วได้ผลดี
