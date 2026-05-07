@@ -79,6 +79,55 @@ Label ภาษา[ไทย/อังกฤษ]
 แสดง front view + back view
 ```
 
+#### N4: Hyper-V Failover Cluster
+
+```
+ช่วยหา template hyper-v-failover-cluster.md จาก
+github.com/nutbadbot/diagram-templates
+แล้วสร้าง diagram สำหรับ [ชื่อลูกค้า]:
+- Node 1: [hostname] — [CPU/RAM spec]
+- Node 2: [hostname] — [CPU/RAM spec]
+- Storage: [SAN model] — [iSCSI/FC]
+- CSV Volumes: [จำนวน + ขนาดแต่ละ volume]
+- VM หลัก: [รายการ VM + IP]
+- Network: [Mgmt VLAN / VM VLAN / LiveMig VLAN]
+- Backup: [Veeam/อื่นๆ]
+```
+
+#### N5: Backup Architecture
+
+```
+ช่วยหา template backup-architecture.md จาก
+github.com/nutbadbot/diagram-templates
+แล้วสร้าง diagram สำหรับ [ชื่อลูกค้า]:
+- Backup software: [Veeam B&R / Commvault / Acronis]
+- Sources: [VMware / Hyper-V / Physical / NAS]
+- Primary repo: [path, size, disk type]
+- Immutable backup: [Yes/No — Linux Hardened / S3 Object Lock]
+- Off-site: [AWS S3 / Azure Blob / DR site / ยังไม่มี]
+- Alert: [Teams webhook / Email / PagerDuty]
+- Retention: Full [X] + Incremental [Y] days
+```
+
+#### N6: VLAN Segmentation
+
+```
+ช่วยหา template vlan-segmentation.md จาก
+github.com/nutbadbot/diagram-templates
+แล้วออกแบบ VLAN สำหรับ [ชื่อลูกค้า]:
+- Users: [จำนวน]
+- Departments: [รายการ]
+- มี Servers: [Yes/No — กี่ตัว]
+- มี WiFi: [Yes/No — Corp/Guest/IoT]
+- มี VoIP: [Yes/No]
+- มี Backup network: [Yes/No]
+- Firewall: [model]
+- Core Switch: [model]
+- IP range: [10.x.x.0/24 / 192.168.x.0/24]
+
+พร้อมสร้าง VLAN table ประกอบด้วย
+```
+
 ---
 
 ### 🏛️ System Architecture
@@ -86,18 +135,16 @@ Label ภาษา[ไทย/อังกฤษ]
 #### A1: 3-Tier Application
 
 ```
-วาด application architecture แบบ 3-tier สำหรับ [ชื่อระบบ]:
-- Presentation: [web/mobile], tech stack: [React/Angular]
-- Application: [Node.js/Java Spring/Python]
-- Database: [MySQL/PostgreSQL/MongoDB]
-
-แสดง:
-- Load balancer หน้า presentation
-- API Gateway ระหว่าง presentation กับ app
-- Cache layer (Redis)
-- DB replication (primary-replica)
-
-Style: boxes + arrows, minimal color
+ช่วยหา template 3-tier-web-app.md จาก
+github.com/nutbadbot/diagram-templates
+แล้วปรับสำหรับ [ชื่อระบบ]:
+- Frontend: [React/Angular/Vue] + [nginx/Apache]
+- Backend: [Node.js/Java Spring/Python FastAPI]
+- Database: [PostgreSQL/MySQL/MongoDB]
+- Cache: [Redis/Memcached]
+- Deploy: [AWS/Azure/On-premise]
+- HA required: [Yes/No]
+- Expected load: [req/sec]
 ```
 
 #### A2: Microservices
@@ -251,12 +298,13 @@ Format: Markdown
 ที่ทีมจะใช้ซ้ำๆ กับลูกค้าหลายๆ ราย
 
 ต้องมี:
+- Pragma Dark Style (background #1a1a2e, layer swimlanes)
+- Cisco icons
 - Placeholder สำหรับ [fields ที่จะเปลี่ยน]
-- Style guide (colors, fonts)
-- Comments อธิบายแต่ละส่วน
-- Instructions ตอนเอาไปใช้
+- Mermaid version ด้วย
+- Prompt ตัวอย่างสำหรับปรับใช้
 
-Save เป็น .drawio ที่ reusable
+Format ตาม CONTRIBUTING.md ของ repo
 ```
 
 ### 📋 D2: Batch update หลาย diagrams
@@ -302,7 +350,7 @@ Export เป็น zip
 1. High-level architecture (1 diagram)
 2. Network topology (1 diagram)
 3. Data flow (1 diagram)
-4. Security zones (1 diagram)
+4. Security zones / VLAN (1 diagram)
 ```
 
 ### 🔥 ขอ review ตัวเอง
@@ -329,6 +377,7 @@ Copy แล้วเติมช่องว่าง:
 
 # Task
 ช่วย [สร้าง/แก้ไข/วิเคราะห์] [diagram type]
+ใช้ template จาก github.com/nutbadbot/diagram-templates
 
 # Requirements
 - [requirement 1]
@@ -336,6 +385,7 @@ Copy แล้วเติมช่องว่าง:
 - [requirement 3]
 
 # Constraints
+- ใช้ Pragma Dark Style
 - ใช้ icon ของ [vendor]
 - Label ภาษา [ไทย/อังกฤษ]
 - ขนาด [simple/detailed/enterprise]
@@ -348,3 +398,5 @@ Copy แล้วเติมช่องว่าง:
 ---
 
 **เพิ่ม prompt ใหม่**: Contribute ผ่าน Pull Request ที่ [repo นี้](https://github.com/nutbadbot/diagram-templates)
+
+**อัพเดตล่าสุด**: 2026-05-07 — เพิ่ม N4 Hyper-V, N5 Backup, N6 VLAN, อัปเดต A1 ให้ใช้ template repo
