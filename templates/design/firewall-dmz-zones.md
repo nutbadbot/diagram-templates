@@ -70,7 +70,7 @@ flowchart TB
 ```xml
 <mxfile host="app.diagrams.net" modified="2026-04-24T00:00:00.000Z" version="24.0.0">
   <diagram name="Firewall DMZ" id="fw-dmz">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#1a1a2e">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
