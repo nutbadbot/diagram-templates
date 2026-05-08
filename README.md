@@ -11,11 +11,11 @@
 
 ## 📖 Repo นี้คืออะไร
 
-เป็นคลังกลางที่เก็บ **diagram templates** ที่ทีม Pragma ใช้งานบ่อย โดยแบ่งเป็น 3 หมวดหลัก:
+เป็นคลังกลางที่เก็บ **diagram templates** ที่ทีม Pragma ใช้งานบ่อย แบ่งตาม **phase ของโปรเจกต์ SI** เพื่อให้หา template ได้ตรงกับงานที่ทำอยู่:
 
-- 🌐 **Network & Infrastructure** — network topology, rack diagrams, firewall zones, Hyper-V, backup, VLAN
-- 🏛️ **System Architecture** — application architecture, cloud architecture, microservices, serverless
-- 🔄 **Process & Workflow** — business process flow, CI/CD pipeline, incident response
+- 🎯 **Pre-Sales** — diagram สำหรับ proposal / ตอบ RFP / นำเสนอลูกค้าเบื้องต้น
+- 📐 **Design** — diagram สำหรับ HLD / LLD / technical design ส่งลูกค้า
+- 📦 **Handover** — diagram สำหรับ as-built / SOP / process ส่งลูกค้าตอนจบโปรเจกต์
 
 Template ทุกตัวมี **Pragma Style** (dark theme + layer bars) พร้อม **Draw.io XML** และ **Mermaid** ที่ Claude เอาไปปรับแก้ได้ทันที
 
@@ -24,8 +24,6 @@ Template ทุกตัวมี **Pragma Style** (dark theme + layer bars) พ
 ---
 
 ## 🚀 Quick Start
-
-### วิธีใช้งาน (ง่ายที่สุด)
 
 เปิด [Claude](https://claude.ai) แล้วพิมพ์:
 
@@ -44,38 +42,41 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 
 ## 📂 Templates ทั้งหมด (18 templates)
 
-### 🌐 Network & Infrastructure (11 templates)
+### 🎯 Pre-Sales (7 templates)
+> ใช้ตอน proposal / RFP / นำเสนอลูกค้าเบื้องต้น
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
-| [3-tier-data-center.md](templates/network-infrastructure/3-tier-data-center.md) | Enterprise DC 100-1,000 users, HA pair | ✅ |
-| [smb-single-site.md](templates/network-infrastructure/smb-single-site.md) | SMB 20-100 users, single site | ✅ |
-| [sd-wan-multi-site.md](templates/network-infrastructure/sd-wan-multi-site.md) | Multi-site SD-WAN, HQ + branches | ✅ |
-| [firewall-dmz-zones.md](templates/network-infrastructure/firewall-dmz-zones.md) | Firewall + DMZ zones, security policy | ✅ |
-| [enterprise-wifi-deployment.md](templates/network-infrastructure/enterprise-wifi-deployment.md) | WiFi 6 enterprise, multiple SSIDs | ✅ |
-| [hyper-v-failover-cluster.md](templates/network-infrastructure/hyper-v-failover-cluster.md) | Hyper-V Failover Cluster 2+ nodes, CSV, Live Migration | ✅ |
-| [backup-architecture.md](templates/network-infrastructure/backup-architecture.md) | Enterprise Backup — 3-2-1 rule, on-prem + cloud | ✅ |
-| [vlan-segmentation.md](templates/network-infrastructure/vlan-segmentation.md) | VLAN design, inter-VLAN routing, zone isolation | ✅ |
-| [rack-elevation-42u.md](templates/network-infrastructure/rack-elevation-42u.md) | 42U rack layout, front view, U position, BOM | ✅ |
-| [spine-leaf-fabric.md](templates/network-infrastructure/spine-leaf-fabric.md) | Modern DC Spine-Leaf (Clos), VXLAN/EVPN, East-West traffic | ✅ |
-| [voip-deployment.md](templates/network-infrastructure/voip-deployment.md) | Enterprise VoIP/UC, SIP Trunk, IP PBX, Voice VLAN, QoS | ✅ |
+| [smb-single-site.md](templates/pre-sales/smb-single-site.md) | SMB 20-100 users, single site | ✅ |
+| [3-tier-data-center.md](templates/pre-sales/3-tier-data-center.md) | Enterprise DC 100-1,000 users, HA pair | ✅ |
+| [sd-wan-multi-site.md](templates/pre-sales/sd-wan-multi-site.md) | Multi-site SD-WAN, HQ + branches | ✅ |
+| [3-tier-web-app.md](templates/pre-sales/3-tier-web-app.md) | Traditional web app (Presentation/App/Data) | ✅ |
+| [microservices-aws.md](templates/pre-sales/microservices-aws.md) | Microservices + Service Mesh, EKS/ECS, event-driven | ✅ |
+| [azure-landing-zone.md](templates/pre-sales/azure-landing-zone.md) | Azure Landing Zone (CAF), Hub-Spoke VNet, Governance | ✅ |
+| [serverless-aws.md](templates/pre-sales/serverless-aws.md) | Serverless, Functions, Event Bus, Queue, NoSQL | ✅ |
 
-### 🏛️ System Architecture (4 templates)
+### 📐 Design (8 templates)
+> ใช้ตอน HLD / LLD / technical design ส่งลูกค้า
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
-| [3-tier-web-app.md](templates/system-architecture/3-tier-web-app.md) | Traditional web app (Presentation/App/Data) | ✅ |
-| [microservices-aws.md](templates/system-architecture/microservices-aws.md) | Microservices + Service Mesh, EKS/ECS, event-driven | ✅ |
-| [azure-landing-zone.md](templates/system-architecture/azure-landing-zone.md) | Azure Landing Zone (CAF), Hub-Spoke VNet, Governance | ✅ |
-| [serverless-aws.md](templates/system-architecture/serverless-aws.md) | Serverless, Functions, Event Bus, Queue, NoSQL | ✅ |
+| [hyper-v-failover-cluster.md](templates/design/hyper-v-failover-cluster.md) | Hyper-V Failover Cluster 2+ nodes, CSV, Live Migration | ✅ |
+| [vlan-segmentation.md](templates/design/vlan-segmentation.md) | VLAN design, inter-VLAN routing, zone isolation | ✅ |
+| [firewall-dmz-zones.md](templates/design/firewall-dmz-zones.md) | Firewall + DMZ zones, security policy | ✅ |
+| [enterprise-wifi-deployment.md](templates/design/enterprise-wifi-deployment.md) | WiFi 6 enterprise, multiple SSIDs | ✅ |
+| [spine-leaf-fabric.md](templates/design/spine-leaf-fabric.md) | Modern DC Spine-Leaf (Clos), VXLAN/EVPN, East-West traffic | ✅ |
+| [voip-deployment.md](templates/design/voip-deployment.md) | Enterprise VoIP/UC, SIP Trunk, IP PBX, Voice VLAN, QoS | ✅ |
+| [backup-architecture.md](templates/design/backup-architecture.md) | Enterprise Backup — 3-2-1 rule, on-prem + cloud | ✅ |
+| [rack-elevation-42u.md](templates/design/rack-elevation-42u.md) | 42U rack layout, front view, U position, BOM | ✅ |
 
-### 🔄 Process & Workflow (3 templates)
+### 📦 Handover (3 templates)
+> ใช้ตอน as-built / SOP / process ส่งลูกค้าจบโปรเจกต์
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
-| [approval-workflow.md](templates/process-flow/approval-workflow.md) | Approval swimlane หลาย actor, decision points | ✅ |
-| [cicd-pipeline.md](templates/process-flow/cicd-pipeline.md) | CI/CD pipeline — Build, Test, Deploy to production | ✅ |
-| [incident-response.md](templates/process-flow/incident-response.md) | Incident response — Detect, Triage, DR, Post-mortem | ✅ |
+| [approval-workflow.md](templates/handover/approval-workflow.md) | Approval swimlane หลาย actor, decision points | ✅ |
+| [cicd-pipeline.md](templates/handover/cicd-pipeline.md) | CI/CD pipeline — Build, Test, Deploy to production | ✅ |
+| [incident-response.md](templates/handover/incident-response.md) | Incident response — Detect, Triage, DR, Post-mortem | ✅ |
 
 ---
 
@@ -105,9 +106,9 @@ diagram-templates/
 ├── MANUAL.md                         ← คู่มือหลัก — อ่านก่อนใช้
 ├── CONTRIBUTING.md                   ← วิธีเพิ่ม template ใหม่
 ├── templates/
-│   ├── network-infrastructure/       ← 11 templates ✅ Pragma Style
-│   ├── system-architecture/          ← 4 templates ✅ Pragma Style
-│   └── process-flow/                 ← 3 templates ✅ Pragma Style
+│   ├── pre-sales/                    ← 7 templates ✅ Pragma Style
+│   ├── design/                       ← 8 templates ✅ Pragma Style
+│   └── handover/                     ← 3 templates ✅ Pragma Style
 ├── docs/
 │   ├── setup-claude.md               ← setup Claude + connectors
 │   ├── prompt-library.md             ← prompt ที่ใช้ได้ผลจริง
