@@ -120,6 +120,45 @@
 
 ---
 
+## 🌊 Mermaid Template
+
+```mermaid
+flowchart TB
+    ISP["ISP\n500 / 200 Mbps"]
+    LTE["4G LTE Backup"]
+
+    subgraph HQ[HQ — Bangkok]
+        HQ_FW["Firewall / SD-WAN Edge\nFortiGate 200F"]
+        HQ_CORE["Core Switch L3\n24x 1G + 4x SFP+"]
+        HQ_ACC["Access Switch x2\n24x PoE+"]
+        HQ_AP["WiFi 6 AP x4\nCorp + Guest"]
+        HQ_FW -- "1G" --> HQ_CORE
+        HQ_CORE -- "1G" --> HQ_ACC
+        HQ_ACC -- "PoE+" --> HQ_AP
+    end
+
+    subgraph BRANCH[Branch — City]
+        BR_FW["Firewall / SD-WAN Edge\nFortiGate 60F"]
+        BR_CORE["Distribution Switch\n16x 1G"]
+        BR_ACC["Access Switch x1\n16x PoE+"]
+        BR_AP["WiFi 6 AP x2\nCorp + Guest"]
+        BR_FW -- "1G" --> BR_CORE
+        BR_CORE -- "1G" --> BR_ACC
+        BR_ACC -- "PoE+" --> BR_AP
+    end
+
+    ISP -- "500 Mbps" --> HQ_FW
+    ISP -- "200 Mbps" --> BR_FW
+    LTE -. "Backup" .-> HQ_FW
+    LTE -. "Backup" .-> BR_FW
+    HQ_FW <-- "SD-WAN IPsec Tunnel" --> BR_FW
+
+    HQ_AP -. "WiFi" .-> HQ_DEV["Laptops · Smartphones"]
+    BR_AP -. "WiFi" .-> BR_DEV["PCs · Smartphones"]
+```
+
+---
+
 ## 💡 Prompt ตัวอย่าง
 
 ```

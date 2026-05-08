@@ -8,6 +8,7 @@
 - ✅ Document VLAN ที่มีอยู่แล้ว
 - ✅ ทุก project ที่มี L3 Switch หรือ Firewall
 - ✅ ใช้คู่กับ 3-tier-data-center.md หรือ smb-single-site.md
+- ❌ **ไม่เหมาะกับ**: Flat network ที่ไม่มี L3 routing, เครือข่ายที่ใช้ VLAN เดียว
 
 ---
 
@@ -99,6 +100,47 @@
     </mxGraphModel>
   </diagram>
 </mxfile>
+```
+
+---
+
+## 🌊 Mermaid Template
+
+```mermaid
+flowchart TB
+    Internet["Internet / ISP"] --> FW["Firewall\nInter-VLAN Policy\nFortiGate / Palo Alto"]
+    FW -- "Trunk (all VLANs)" --> Core["Core Switch L3\nInter-VLAN Routing (SVI)"]
+
+    Core -- "SVI 10" --> VLAN10
+    Core -- "SVI 20" --> VLAN20
+    Core -- "SVI 30" --> VLAN30
+    Core -- "SVI 40" --> VLAN40
+    Core -- "SVI 50" --> VLAN50
+
+    subgraph VLAN10[VLAN 10 — MANAGEMENT  10.10.10.0/24]
+        SW_MGT[Switch Mgmt\n10.10.10.x]
+        IDRAC[iDRAC / iLO\nServer OOB]
+        WAC[Windows Admin Center\nWSUS]
+    end
+    subgraph VLAN20[VLAN 20 — PRODUCTION  10.20.20.0/24]
+        APP[App Servers\n10.20.20.10-20]
+        DB[Database\n10.20.20.30-40]
+        FS[File Server\n10.20.20.50]
+    end
+    subgraph VLAN30[VLAN 30 — USER  10.30.30.0/24]
+        PC[Workstations\n10.30.30.100+]
+        VOIP[IP Phones\n10.30.30.200+]
+    end
+    subgraph VLAN40[VLAN 40 — WIRELESS  10.40.40.0/24]
+        CORP_WIFI[Corp WiFi SSID\n10.40.40.0/25]
+        GUEST[Guest SSID\n10.40.41.0/25\nInternet-only]
+        IOT[IoT Devices\n10.40.42.0/25\nIsolated]
+    end
+    subgraph VLAN50[VLAN 50 — BACKUP  10.50.50.0/24]
+        VBR[Veeam B&R\n10.50.50.10]
+        REPO[Backup Repo\n10.50.50.20]
+        ISCSI[CSV / SAN\niSCSI Network]
+    end
 ```
 
 ---

@@ -102,6 +102,53 @@
 
 ---
 
+## 🌊 Mermaid Template
+
+```mermaid
+flowchart TB
+    ISP["ISP\n300 Mbps Fiber"]
+    LTE["4G LTE Backup\n50 Mbps"]
+
+    subgraph SEC[SECURITY LAYER]
+        FW["Firewall / UTM\nFortiGate 60F"]
+    end
+
+    subgraph CORE_LAYER[CORE LAYER]
+        CORE["Core Switch\n24x 1G + 4x SFP+"]
+        NAS["NAS / File Server\nStorage"]
+    end
+
+    subgraph ACCESS_LAYER[ACCESS LAYER]
+        ACC["Access Switch\n24x PoE+"]
+    end
+
+    subgraph WIFI[WIRELESS ZONE]
+        AP1["WiFi 6 AP\nCorporate SSID"]
+        AP2["WiFi 6 AP\nGuest SSID"]
+    end
+
+    subgraph EP[END DEVICES]
+        PC["Workstations\nWired"]
+        LAPTOP["Laptops\nWiFi"]
+        MOBILE["Smartphones\nWiFi"]
+        PHONE["IP Phones\nPoE"]
+    end
+
+    ISP -- "300 Mbps" --> FW
+    LTE -. "Backup" .-> FW
+    FW -- "1G" --> CORE
+    CORE -- "1G" --> ACC
+    CORE -- "1G" --> NAS
+    ACC -- "PoE+" --> AP1
+    ACC -- "PoE+" --> AP2
+    ACC --> PC
+    ACC --> PHONE
+    AP1 -. "WiFi" .-> LAPTOP
+    AP2 -. "WiFi" .-> MOBILE
+```
+
+---
+
 ## 💡 Prompt ตัวอย่าง
 
 ### แบบ A: SMB พื้นฐาน

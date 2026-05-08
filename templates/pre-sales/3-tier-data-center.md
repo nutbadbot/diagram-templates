@@ -120,6 +120,62 @@
 
 ---
 
+## 🌊 Mermaid Template
+
+```mermaid
+flowchart TB
+    ISP["ISP / Internet"]
+
+    subgraph SEC[SECURITY LAYER — Firewall HA Pair]
+        FW1["Firewall Primary\nActive"]
+        FW2["Firewall Secondary\nStandby"]
+        FW1 <-- "HA" --> FW2
+    end
+
+    subgraph CORE[CORE LAYER — L3 Switch HSRP/VRRP]
+        C1["Core Switch 1\nCisco Nexus 9500"]
+        C2["Core Switch 2\nCisco Nexus 9500"]
+        C1 <-- "HSRP" --> C2
+    end
+
+    subgraph DIST[DISTRIBUTION LAYER — L3 Switch]
+        D1["Dist Switch 1\nCatalyst 9500"]
+        D2["Dist Switch 2\nCatalyst 9500"]
+        D3["Dist Switch 3\nCatalyst 9500"]
+    end
+
+    subgraph ACCESS[ACCESS LAYER — PoE Switch]
+        A1["Access Stack 1\nFloor 1 · 48x PoE+"]
+        A2["Access Stack 2\nFloor 2 · 48x PoE+"]
+        A3["Access Stack 3\nFloor 3 · 48x PoE+"]
+    end
+
+    subgraph EP[END DEVICES]
+        WS[Workstations\nWired]
+        LT[Laptops\nWireless]
+        SRV[Server Farm\nRack]
+        PH[IP Phones\nPoE]
+    end
+
+    ISP -- "WAN" --> FW1
+    ISP -- "WAN" --> FW2
+    FW1 -- "10G" --> C1
+    FW2 -- "10G" --> C2
+    C1 -- "10G" --> D1
+    C1 -- "10G" --> D2
+    C2 -- "10G" --> D2
+    C2 -- "10G" --> D3
+    D1 -- "1G" --> A1
+    D2 -- "1G" --> A2
+    D3 -- "1G" --> A3
+    A1 --> WS
+    A2 --> LT
+    A3 --> PH
+    C1 --> SRV
+```
+
+---
+
 ## 💡 Prompt ตัวอย่าง
 
 ### แบบ A: Enterprise 3-tier
