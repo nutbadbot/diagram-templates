@@ -13,7 +13,7 @@ Template ของคุณเข้าข่ายหมวดไหน?
 | หมวด | ตัวอย่าง |
 |---|---|
 | `network-infrastructure/` | network topology, rack, firewall zone, SD-WAN, Hyper-V, backup, VLAN |
-| `system-architecture/` | microservices, 3-tier app, cloud (AWS/Azure) |
+| `system-architecture/` | microservices, 3-tier app, cloud (AWS/Azure/GCP) |
 | `process-flow/` | business workflow, approval, CI/CD pipeline |
 
 ถ้าไม่เข้าหมวดไหนเลย เปิด Issue ถามก่อนครับ
@@ -120,13 +120,39 @@ git push origin add-template-xxx
 - [ ] ไฟล์อยู่ในหมวดที่ถูกต้อง
 - [ ] ชื่อไฟล์ตาม format (kebab-case, ภาษาอังกฤษ)
 - [ ] มีส่วน "ใช้ตอนไหน" พร้อม ✅ และ ❌
-- [ ] **ใช้ Pragma Dark Style** — background `#1a1a2e`, layer swimlanes, Cisco icons
+- [ ] **ใช้ Pragma Dark Style** — background `#1a1a2e`, layer swimlanes
 - [ ] Draw.io XML ทดสอบเปิดใน Draw.io แล้วแสดงผลถูกต้อง
 - [ ] มี Mermaid version (quick reference)
 - [ ] มี prompt ตัวอย่างอย่างน้อย 1 แบบ
-- [ ] มีตาราง Parameters ที่ปรับได้
+- [ ] มีตาราง Parameters ที่ปรับได้ — **ระบุทางเลือก vendor หลายๆ ตัว ไม่ lock เฉพาะยี่ห้อเดียว**
 - [ ] มี Related Templates ใน Notes
 - [ ] **ไม่มีข้อมูลลูกค้า/ข้อมูลลับ** (IP จริง, ชื่อบริษัทลูกค้า, credentials)
+
+---
+
+## 🎨 Pragma Dark Style — ข้อกำหนด
+
+ทุก template ใช้ **Pragma Dark Style** มาตรฐาน:
+
+| Layer | Fill Color | Stroke Color | ใช้สำหรับ |
+|---|---|---|---|
+| Internet / WAN | `#1a2a4a` | `#4a90d9` | Cloud, ISP, external endpoint |
+| Security | `#2d1a0e` | `#ff9800` | Firewall, WAF, SBC, Gateway |
+| Core / Compute | `#0d2b1a` | `#2e7d32` | Core switch, Server, K8s, Function |
+| Access / Edge | `#1a1030` | `#7c4dff` | Voice VLAN, Access switch, Queue |
+| Data | `#0d1f2b` | `#0288d1` | Database, Storage, Cache |
+| Reject / Error | `#3a1010` | `#e53935` | Reject node, Error state, Block |
+| Endpoint | `#1a1a1a` | `#424242` | PC, Phone, End device |
+
+**Node shapes:**
+- Process / Service → `rounded=1` rectangle
+- Decision → `rhombus`
+- Database → `shape=cylinder3`
+- Start / End → `ellipse`
+- Icon (network device) → ใช้ shape library ที่เหมาะสมกับ vendor จริงของลูกค้า หรือ generic icon ถ้าไม่ fix vendor
+
+**ข้อสำคัญ — Vendor Agnostic:**
+> Template ต้องออกแบบให้ปรับ vendor ได้ง่าย อย่า hardcode ชื่ออุปกรณ์ลงใน label หลัก ให้ใส่ในตาราง Parameters แทน ตัวอย่างเช่น label ว่า "Core Switch" แทน "Cisco Nexus 9500" และระบุ vendor ใน Parameters table ว่า default คืออะไร ทางเลือกคืออะไรบ้าง
 
 ---
 
@@ -136,12 +162,13 @@ git push origin add-template-xxx
 - ❌ ไม่ใส่ไฟล์ binary ขนาดใหญ่ (>5MB) — ใช้ external link
 - ❌ ไม่ copy template จากที่อื่นโดยไม่มี attribution
 - ❌ ไม่ใช้ light theme (white background) — ทุก template ต้องเป็น Pragma Dark Style
+- ❌ ไม่ lock vendor ลงใน template หลัก — ให้ระบุใน Parameters แทน
 
 ---
 
 ## 🏆 Template ที่ดีควรมี
 
-1. **Generalization**: ปรับใช้ได้กับหลาย use case
+1. **Generalization**: ปรับใช้ได้กับหลาย use case และหลาย vendor
 2. **Documentation**: มีคำอธิบายครบ ไม่ต้องถามทีมเพิ่ม
 3. **Pragma Style**: dark theme สม่ำเสมอทุก template
 4. **Best practices**: สะท้อน standard ของทีม Pragma

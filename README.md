@@ -4,7 +4,7 @@
 
 [![Made with Claude](https://img.shields.io/badge/Made%20with-Claude-D97757)](https://claude.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/Templates-13-blue)](#)
+[![Templates](https://img.shields.io/badge/Templates-18-blue)](#)
 [![Style](https://img.shields.io/badge/Style-Pragma%20Dark-1a1a2e)](#)
 
 ---
@@ -14,10 +14,12 @@
 เป็นคลังกลางที่เก็บ **diagram templates** ที่ทีม Pragma ใช้งานบ่อย โดยแบ่งเป็น 3 หมวดหลัก:
 
 - 🌐 **Network & Infrastructure** — network topology, rack diagrams, firewall zones, Hyper-V, backup, VLAN
-- 🏛️ **System Architecture** — application architecture, cloud architecture, microservices
+- 🏛️ **System Architecture** — application architecture, cloud architecture, microservices, serverless
 - 🔄 **Process & Workflow** — business process flow, CI/CD pipeline, incident response
 
-Template ทุกตัวมี **Pragma Style** (dark theme + Cisco icons + layer bars) พร้อม **Draw.io XML** และ **Mermaid** ที่ Claude เอาไปปรับแก้ได้ทันที
+Template ทุกตัวมี **Pragma Style** (dark theme + layer bars) พร้อม **Draw.io XML** และ **Mermaid** ที่ Claude เอาไปปรับแก้ได้ทันที
+
+> **Vendor-agnostic**: template ทุกตัวออกแบบให้ปรับเปลี่ยนอุปกรณ์/vendor ได้ง่าย ไม่ lock เฉพาะยี่ห้อใด — ดูตาราง Parameters ในแต่ละไฟล์
 
 ---
 
@@ -40,33 +42,38 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 
 ---
 
-## 📂 Templates ทั้งหมด (13 templates)
+## 📂 Templates ทั้งหมด (18 templates)
 
-### 🌐 Network & Infrastructure (9 templates)
+### 🌐 Network & Infrastructure (11 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
-| [3-tier-data-center.md](templates/network-infrastructure/3-tier-data-center.md) | Enterprise DC 100-1000 users, HA pair | ✅ |
+| [3-tier-data-center.md](templates/network-infrastructure/3-tier-data-center.md) | Enterprise DC 100-1,000 users, HA pair | ✅ |
 | [smb-single-site.md](templates/network-infrastructure/smb-single-site.md) | SMB 20-100 users, single site | ✅ |
 | [sd-wan-multi-site.md](templates/network-infrastructure/sd-wan-multi-site.md) | Multi-site SD-WAN, HQ + branches | ✅ |
 | [firewall-dmz-zones.md](templates/network-infrastructure/firewall-dmz-zones.md) | Firewall + DMZ zones, security policy | ✅ |
 | [enterprise-wifi-deployment.md](templates/network-infrastructure/enterprise-wifi-deployment.md) | WiFi 6 enterprise, multiple SSIDs | ✅ |
 | [hyper-v-failover-cluster.md](templates/network-infrastructure/hyper-v-failover-cluster.md) | Hyper-V Failover Cluster 2+ nodes, CSV, Live Migration | ✅ |
-| [backup-architecture.md](templates/network-infrastructure/backup-architecture.md) | Enterprise Backup — Veeam/Commvault, 3-2-1 rule | ✅ |
+| [backup-architecture.md](templates/network-infrastructure/backup-architecture.md) | Enterprise Backup — 3-2-1 rule, on-prem + cloud | ✅ |
 | [vlan-segmentation.md](templates/network-infrastructure/vlan-segmentation.md) | VLAN design, inter-VLAN routing, zone isolation | ✅ |
 | [rack-elevation-42u.md](templates/network-infrastructure/rack-elevation-42u.md) | 42U rack layout, front view, U position, BOM | ✅ |
+| [spine-leaf-fabric.md](templates/network-infrastructure/spine-leaf-fabric.md) | Modern DC Spine-Leaf (Clos), VXLAN/EVPN, East-West traffic | ✅ |
+| [voip-deployment.md](templates/network-infrastructure/voip-deployment.md) | Enterprise VoIP/UC, SIP Trunk, IP PBX, Voice VLAN, QoS | ✅ |
 
-### 🏛️ System Architecture (1 template)
+### 🏛️ System Architecture (4 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
 | [3-tier-web-app.md](templates/system-architecture/3-tier-web-app.md) | Traditional web app (Presentation/App/Data) | ✅ |
+| [microservices-aws.md](templates/system-architecture/microservices-aws.md) | Microservices + Service Mesh, EKS/ECS, event-driven | ✅ |
+| [azure-landing-zone.md](templates/system-architecture/azure-landing-zone.md) | Azure Landing Zone (CAF), Hub-Spoke VNet, Governance | ✅ |
+| [serverless-aws.md](templates/system-architecture/serverless-aws.md) | Serverless, Functions, Event Bus, Queue, NoSQL | ✅ |
 
 ### 🔄 Process & Workflow (3 templates)
 
 | ไฟล์ | ใช้ตอนไหน | Pragma Style |
 |---|---|---|
-| [approval-workflow.md](templates/process-flow/approval-workflow.md) | Generic approval workflow (swimlane) | 🔜 |
+| [approval-workflow.md](templates/process-flow/approval-workflow.md) | Approval swimlane หลาย actor, decision points | ✅ |
 | [cicd-pipeline.md](templates/process-flow/cicd-pipeline.md) | CI/CD pipeline — Build, Test, Deploy to production | ✅ |
 | [incident-response.md](templates/process-flow/incident-response.md) | Incident response — Detect, Triage, DR, Post-mortem | ✅ |
 
@@ -76,16 +83,17 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 
 ทุก template ใช้ **Pragma Dark Style** มาตรฐาน:
 
-| Layer | สี | อุปกรณ์ |
+| Layer | สี | ใช้สำหรับ |
 |---|---|---|
-| Internet / ISP | น้ำเงินเข้ม | Router, ISP, Cloud |
-| Security | น้ำตาลแดง | Firewall, UTM, SD-WAN Edge |
-| Core | เขียวเข้ม | L3 Switch, Core Switch |
-| Access | ม่วงเข้ม | L2 Switch, PoE Switch |
-| Wireless | ฟ้าอ่อน | WiFi AP, Controller |
-| Storage | เหลืองเข้ม | SAN, NAS, CSV |
-| End Devices | เทาเข้ม | PC, Laptop, Phone |
-| Power | ส้ม | UPS, PDU |
+| Internet / WAN | น้ำเงินเข้ม | Cloud, ISP, External endpoint |
+| Security | น้ำตาลแดง | Firewall, WAF, Gateway, SBC |
+| Core / Compute | เขียวเข้ม | Core switch, Server, K8s, Function |
+| Access / Edge | ม่วงเข้ม | Access switch, Voice VLAN, Queue |
+| Data | ฟ้าเข้ม | Database, Storage, Cache |
+| Reject / Error | แดงเข้ม | Error state, Reject node, Block |
+| Endpoint | เทาเข้ม | PC, Phone, End device |
+
+> **Vendor-agnostic**: icon และ label ในแต่ละ template ไม่ lock vendor — ปรับยี่ห้ออุปกรณ์ได้ตาม Parameters ของแต่ละไฟล์
 
 ---
 
@@ -97,9 +105,9 @@ diagram-templates/
 ├── MANUAL.md                         ← คู่มือหลัก — อ่านก่อนใช้
 ├── CONTRIBUTING.md                   ← วิธีเพิ่ม template ใหม่
 ├── templates/
-│   ├── network-infrastructure/       ← 9 templates ✅ Pragma Style
-│   ├── system-architecture/          ← 1 template ✅ Pragma Style
-│   └── process-flow/                 ← 3 templates (2 ✅, 1 🔜)
+│   ├── network-infrastructure/       ← 11 templates ✅ Pragma Style
+│   ├── system-architecture/          ← 4 templates ✅ Pragma Style
+│   └── process-flow/                 ← 3 templates ✅ Pragma Style
 ├── docs/
 │   ├── setup-claude.md               ← setup Claude + connectors
 │   ├── prompt-library.md             ← prompt ที่ใช้ได้ผลจริง
@@ -124,23 +132,13 @@ diagram-templates/
 
 ## 🔜 Roadmap
 
-### Network & Infrastructure
-- [ ] `spine-leaf-fabric.md` — Modern DC Spine-Leaf topology
-- [ ] `voip-deployment.md` — VoIP deployment
-
-### System Architecture
-- [ ] `microservices-aws.md` — Microservices + API Gateway บน AWS
-- [ ] `azure-landing-zone.md` — Azure Landing Zone
-- [ ] `serverless-aws.md` — Serverless (Lambda + API GW + DynamoDB)
-
-### Process & Workflow
-- [ ] `approval-workflow.md` — เพิ่ม Pragma Style (ยังเป็น 🔜)
+ไม่มี template ที่ค้างอยู่ตอนนี้ — ถ้าต้องการ template เพิ่ม เปิด [Issue](https://github.com/nutbadbot/diagram-templates/issues) ได้เลยครับ
 
 ---
 
 ## 🤝 ทีม
 
-Repo นี้ดูแลโดยทีม Pragma — ทุกคนใน team สามารถ contribute template ใหม่ได้
+Repo นี้ดูแลโดยทีม Pragma — ทุกคนใน team สามารถ contribute template ใหม่ได้ ดูวิธีที่ [CONTRIBUTING.md](CONTRIBUTING.md)
 
 **ติดต่อ**: [Nuttawut](https://github.com/nutbadbot)
 
