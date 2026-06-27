@@ -25,7 +25,6 @@
           <mxGeometry x="80" y="16" width="940" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- PSTN / SIP TRUNK -->
         <mxCell id="L0" value="PSTN / SIP TRUNK PROVIDER" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="65" width="1020" height="110" as="geometry"/>
         </mxCell>
@@ -39,7 +38,6 @@
           <mxGeometry x="760" y="10" width="128" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- DMZ / EDGE -->
         <mxCell id="L1" value="SECURITY EDGE — SBC / Firewall" style="swimlane;startSize=30;fillColor=#2d1a0e;strokeColor=#8b3a0f;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="205" width="1020" height="140" as="geometry"/>
         </mxCell>
@@ -53,7 +51,6 @@
           <mxGeometry x="700" y="50" width="260" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- CORE UC -->
         <mxCell id="L2" value="CALL CONTROL — IP PBX / CUCM" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="375" width="1020" height="150" as="geometry"/>
         </mxCell>
@@ -73,7 +70,6 @@
           <mxGeometry x="840" y="25" width="80" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- VOICE VLAN / ACCESS -->
         <mxCell id="L3" value="VOICE VLAN — QoS Enabled Access Layer" style="swimlane;startSize=30;fillColor=#1a1030;strokeColor=#7c4dff;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="555" width="1020" height="130" as="geometry"/>
         </mxCell>
@@ -90,7 +86,6 @@
           <mxGeometry x="50" y="98" width="900" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- ENDPOINTS -->
         <mxCell id="L4" value="ENDPOINTS" style="swimlane;startSize=30;fillColor=#1a1a1a;strokeColor=#424242;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="715" width="1020" height="120" as="geometry"/>
         </mxCell>
@@ -107,7 +102,6 @@
           <mxGeometry x="810" y="15" width="53" height="70" as="geometry"/>
         </mxCell>
 
-        <!-- Edges -->
         <mxCell id="ep1" value="SIP/TLS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="sip_provider" target="sbc"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ep2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="ms_teams" target="sbc"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ep3" value="PRI/E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8b3a0f;strokeWidth=2;fontColor=#ff9800;fontSize=9;" edge="1" parent="1" source="pstn" target="fw_voip"><mxGeometry relative="1" as="geometry"/></mxCell>

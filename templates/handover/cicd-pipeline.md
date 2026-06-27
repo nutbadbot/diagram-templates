@@ -24,7 +24,6 @@
           <mxGeometry x="200" y="20" width="800" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 1: DEVELOPER -->
         <mxCell id="lane_dev" value="DEVELOPER" style="swimlane;horizontal=0;startSize=110;fillColor=#1a1a1a;strokeColor=#424242;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="70" width="1200" height="120" as="geometry"/>
         </mxCell>
@@ -38,7 +37,6 @@
           <mxGeometry x="520" y="30" width="120" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 2: CI — SOURCE & BUILD -->
         <mxCell id="lane_ci" value="CI — BUILD &amp; TEST" style="swimlane;horizontal=0;startSize=110;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="210" width="1200" height="120" as="geometry"/>
         </mxCell>
@@ -61,7 +59,6 @@
           <mxGeometry x="920" y="30" width="120" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 3: CD — STAGING -->
         <mxCell id="lane_stg" value="CD — STAGING" style="swimlane;horizontal=0;startSize=110;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="350" width="1200" height="120" as="geometry"/>
         </mxCell>
@@ -81,7 +78,6 @@
           <mxGeometry x="820" y="30" width="120" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 4: CD — PRODUCTION -->
         <mxCell id="lane_prod" value="CD — PRODUCTION" style="swimlane;horizontal=0;startSize=110;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="490" width="1200" height="130" as="geometry"/>
         </mxCell>
@@ -104,7 +100,6 @@
           <mxGeometry x="1010" y="35" width="120" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 5: MONITORING -->
         <mxCell id="lane_mon" value="MONITORING" style="swimlane;horizontal=0;startSize=110;fillColor=#0d1f2b;strokeColor=#0288d1;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="640" width="1200" height="100" as="geometry"/>
         </mxCell>
@@ -121,11 +116,9 @@
           <mxGeometry x="780" y="20" width="160" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- EDGES — Developer lane -->
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9c27b0;strokeWidth=2;" edge="1" parent="lane_dev" source="commit" target="pr"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#9c27b0;strokeWidth=2;" edge="1" parent="lane_dev" source="pr" target="code_review"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- EDGES — CI lane -->
         <mxCell id="e3" value="merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="code_review" target="trigger"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="lane_ci" source="trigger" target="lint"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="lane_ci" source="lint" target="unit_test"><mxGeometry relative="1" as="geometry"/></mxCell>
@@ -133,14 +126,12 @@
         <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="lane_ci" source="build" target="scan"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="lane_ci" source="scan" target="push_reg"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- EDGES — Staging lane -->
         <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6a1b9a;strokeWidth=2;" edge="1" parent="1" source="push_reg" target="deploy_stg"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6a1b9a;strokeWidth=2;" edge="1" parent="lane_stg" source="deploy_stg" target="int_test"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6a1b9a;strokeWidth=2;" edge="1" parent="lane_stg" source="int_test" target="perf_test"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6a1b9a;strokeWidth=2;" edge="1" parent="lane_stg" source="perf_test" target="stg_ok"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e13" value="fail" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#cc0000;strokeWidth=2;fontColor=#ff5555;fontSize=9;" edge="1" parent="lane_stg" source="stg_ok" target="notify_fail"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- EDGES — Production lane -->
         <mxCell id="e14" value="pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#90caf9;fontSize=9;" edge="1" parent="1" source="stg_ok" target="approval"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e15" value="approved" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#90caf9;fontSize=9;" edge="1" parent="lane_prod" source="approval" target="deploy_prod"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="lane_prod" source="deploy_prod" target="smoke"><mxGeometry relative="1" as="geometry"/></mxCell>

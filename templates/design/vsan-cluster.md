@@ -24,7 +24,6 @@
           <mxGeometry x="100" y="20" width="900" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- MANAGEMENT VLAN -->
         <mxCell id="L_mgmt" value="VLAN 10 — MANAGEMENT     10.10.10.0/24     vCenter, ESXi Mgmt, iDRAC" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="80" width="1000" height="90" as="geometry"/>
         </mxCell>
@@ -44,7 +43,6 @@
           <mxGeometry x="800" y="25" width="140" height="45" as="geometry"/>
         </mxCell>
 
-        <!-- SWITCH PAIR -->
         <mxCell id="sw1" value="ToR Switch A&#xa;10GbE&#xa;PRG-SW-01" style="sketch=0;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.cisco.switches.layer_3_switch;fillColor=#2e7d32;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="330" y="220" width="64" height="64" as="geometry"/>
         </mxCell>
@@ -55,12 +53,10 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- vSAN NODES -->
         <mxCell id="L_nodes" value="vSAN Cluster — 3 Nodes (Dell PowerEdge R6515 × 3)     Switch-Independent Teaming (Active/Standby per vmnic)" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="360" width="1000" height="220" as="geometry"/>
         </mxCell>
 
-        <!-- Node 1 -->
         <mxCell id="n1" value="PRG-ESX01&#xa;Dell R6515&#xa;CPU: AMD EPYC 7313P&#xa;RAM: 256 GB&#xa;Cache: 400GB NVMe&#xa;Cap: 4× 3.84TB SSD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=9;" vertex="1" parent="L_nodes">
           <mxGeometry x="60" y="40" width="200" height="130" as="geometry"/>
         </mxCell>
@@ -68,7 +64,6 @@
           <mxGeometry x="60" y="175" width="200" height="35" as="geometry"/>
         </mxCell>
 
-        <!-- Node 2 -->
         <mxCell id="n2" value="PRG-ESX02&#xa;Dell R6515&#xa;CPU: AMD EPYC 7313P&#xa;RAM: 256 GB&#xa;Cache: 400GB NVMe&#xa;Cap: 4× 3.84TB SSD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=9;" vertex="1" parent="L_nodes">
           <mxGeometry x="400" y="40" width="200" height="130" as="geometry"/>
         </mxCell>
@@ -76,7 +71,6 @@
           <mxGeometry x="400" y="175" width="200" height="35" as="geometry"/>
         </mxCell>
 
-        <!-- Node 3 -->
         <mxCell id="n3" value="PRG-ESX03&#xa;Dell R6515&#xa;CPU: AMD EPYC 7313P&#xa;RAM: 256 GB&#xa;Cache: 400GB NVMe&#xa;Cap: 4× 3.84TB SSD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=9;" vertex="1" parent="L_nodes">
           <mxGeometry x="740" y="40" width="200" height="130" as="geometry"/>
         </mxCell>
@@ -84,7 +78,6 @@
           <mxGeometry x="740" y="175" width="200" height="35" as="geometry"/>
         </mxCell>
 
-        <!-- VSAN + VMOTION VLAN -->
         <mxCell id="L_vsan" value="VLAN 20 — vSAN Traffic     10.20.20.0/24     vSAN datastore, resync, rebuild" style="swimlane;startSize=30;fillColor=#1a1a0d;strokeColor=#f9a825;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="620" width="480" height="80" as="geometry"/>
         </mxCell>
@@ -99,12 +92,10 @@
           <mxGeometry x="60" y="25" width="340" height="38" as="geometry"/>
         </mxCell>
 
-        <!-- WITNESS -->
         <mxCell id="witness" value="vSAN Witness&#xa;PRG-WITNESS01&#xa;NAS / Witness Appliance&#xa;10.10.10.50" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2a2a0d;strokeColor=#cddc39;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="450" y="740" width="200" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- Edges nodes → switches -->
         <mxCell id="e_n1_swa" value="vmnic0 (A)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="n1" target="sw1"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_n1_swb" value="vmnic1 (B)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;dashed=1;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="n1" target="sw2"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_n2_swa" value="vmnic0 (A)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="n2" target="sw1"><mxGeometry relative="1" as="geometry"/></mxCell>

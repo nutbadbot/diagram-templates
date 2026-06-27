@@ -25,7 +25,6 @@
           <mxGeometry x="100" y="16" width="900" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- BORDER GATEWAY / EXTERNAL -->
         <mxCell id="L0" value="EXTERNAL — Border / WAN" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="65" width="1020" height="110" as="geometry"/>
         </mxCell>
@@ -36,7 +35,6 @@
           <mxGeometry x="570" y="18" width="128" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- SPINE LAYER -->
         <mxCell id="L1" value="SPINE LAYER — L3 Underlay (OSPF/IS-IS) + VXLAN Overlay (EVPN)" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="205" width="1020" height="140" as="geometry"/>
         </mxCell>
@@ -53,7 +51,6 @@
           <mxGeometry x="150" y="108" width="700" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- LEAF LAYER -->
         <mxCell id="L2" value="LEAF LAYER — L2/L3 Edge (VXLAN VTEP)" style="swimlane;startSize=30;fillColor=#2d1a0e;strokeColor=#ff9800;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="375" width="1020" height="150" as="geometry"/>
         </mxCell>
@@ -73,7 +70,6 @@
           <mxGeometry x="860" y="30" width="64" height="64" as="geometry"/>
         </mxCell>
 
-        <!-- SERVER / ENDPOINT LAYER -->
         <mxCell id="L3" value="ENDPOINTS — Servers / Storage / Hypervisors" style="swimlane;startSize=30;fillColor=#1a1a1a;strokeColor=#424242;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="555" width="1020" height="140" as="geometry"/>
         </mxCell>
@@ -93,13 +89,11 @@
           <mxGeometry x="880" y="20" width="70" height="70" as="geometry"/>
         </mxCell>
 
-        <!-- Spine ↔ BGW -->
         <mxCell id="eb1" value="100G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="bgw1" target="sp1"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="eb2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="bgw1" target="sp2"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="eb3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="bgw2" target="sp2"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="eb4" value="100G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="bgw2" target="sp3"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- Spine ↔ Leaf (every spine to every leaf) -->
         <mxCell id="es11" value="100G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="sp1" target="lf1"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="es12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=1;dashed=1;" edge="1" parent="1" source="sp1" target="lf2"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="es13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=1;dashed=1;" edge="1" parent="1" source="sp1" target="lf3"><mxGeometry relative="1" as="geometry"/></mxCell>
@@ -116,7 +110,6 @@
         <mxCell id="es34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=1;dashed=1;" edge="1" parent="1" source="sp3" target="lf4"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="es35" value="100G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="sp3" target="lf5"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- Leaf ↔ Server -->
         <mxCell id="el1" value="25G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;fontColor=#ff9800;fontSize=9;" edge="1" parent="1" source="lf1" target="srv1"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="el2" value="25G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;fontColor=#ff9800;fontSize=9;" edge="1" parent="1" source="lf2" target="srv2"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="el3" value="100G" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;fontColor=#7c4dff;fontSize=9;" edge="1" parent="1" source="lf3" target="srv3"><mxGeometry relative="1" as="geometry"/></mxCell>

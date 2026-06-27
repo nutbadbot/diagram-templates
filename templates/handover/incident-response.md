@@ -25,7 +25,6 @@
           <mxGeometry x="150" y="20" width="800" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 1: DETECTION -->
         <mxCell id="lane_det" value="1 — DETECTION" style="swimlane;horizontal=0;startSize=110;fillColor=#2d1a0e;strokeColor=#ff9800;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="70" width="1100" height="110" as="geometry"/>
         </mxCell>
@@ -45,7 +44,6 @@
           <mxGeometry x="800" y="25" width="180" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 2: TRIAGE -->
         <mxCell id="lane_tri" value="2 — TRIAGE &amp; CLASSIFY" style="swimlane;horizontal=0;startSize=110;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="200" width="1100" height="110" as="geometry"/>
         </mxCell>
@@ -71,7 +69,6 @@
           <mxGeometry x="860" y="25" width="150" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 3: RESPONSE -->
         <mxCell id="lane_res" value="3 — RESPONSE &amp; MITIGATION" style="swimlane;horizontal=0;startSize=110;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="330" width="1100" height="130" as="geometry"/>
         </mxCell>
@@ -91,7 +88,6 @@
           <mxGeometry x="790" y="30" width="180" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 4: RECOVERY -->
         <mxCell id="lane_rec" value="4 — RECOVERY &amp; VERIFY" style="swimlane;horizontal=0;startSize=110;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="480" width="1100" height="110" as="geometry"/>
         </mxCell>
@@ -108,7 +104,6 @@
           <mxGeometry x="670" y="25" width="150" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- LANE 5: POST-MORTEM -->
         <mxCell id="lane_pm" value="5 — POST-MORTEM" style="swimlane;horizontal=0;startSize=110;fillColor=#0d1f2b;strokeColor=#0288d1;fontColor=#ffffff;fontSize=12;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="610" width="1100" height="110" as="geometry"/>
         </mxCell>
@@ -128,7 +123,6 @@
           <mxGeometry x="890" y="30" width="120" height="50" as="geometry"/>
         </mxCell>
 
-        <!-- EDGES -->
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="lane_det" source="mon_alert" target="detect_confirm"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="lane_det" source="user_report" target="detect_confirm"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="lane_det" source="auto_detect" target="detect_confirm"><mxGeometry relative="1" as="geometry"/></mxCell>

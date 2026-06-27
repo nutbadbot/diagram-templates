@@ -24,32 +24,26 @@
           <mxGeometry x="100" y="20" width="900" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- ISP / WAN -->
         <mxCell id="isp" value="Internet / ISP&#xa;WAN uplink" style="strokeColor=#ffffff;sketch=0;html=1;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.routers.atm_router;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="530" y="30" width="78" height="53" as="geometry"/>
         </mxCell>
 
-        <!-- FORTIGATE ACTIVE -->
         <mxCell id="fgt_act" value="FortiGate 200F — ACTIVE&#xa;Primary Unit&#xa;Management IP: 10.10.10.1&#xa;WAN: 1.2.3.4 (Virtual IP)&#xa;LAN: 10.10.10.254 (Virtual IP)" style="sketch=0;points=[[0.015,0.015,0],[0.985,0.015,0],[0.985,0.985,0],[0.015,0.985,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;shape=mxgraph.cisco19.rect;prIcon=firewall;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="300" y="150" width="120" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- FORTIGATE PASSIVE -->
         <mxCell id="fgt_pas" value="FortiGate 200F — PASSIVE&#xa;Secondary Unit (Standby)&#xa;Management IP: 10.10.10.2&#xa;Sync from Active unit" style="sketch=0;points=[[0.015,0.015,0],[0.985,0.015,0],[0.985,0.985,0],[0.015,0.985,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];verticalLabelPosition=bottom;html=1;verticalAlign=top;aspect=fixed;align=center;shape=mxgraph.cisco19.rect;prIcon=firewall;fillColor=#3a1010;strokeColor=#e53935;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="720" y="150" width="120" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- HA HEARTBEAT -->
         <mxCell id="ha_hb" value="HA Heartbeat&#xa;port3 ↔ port3&#xa;169.254.0.x (link-local)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f9a825;strokeWidth=3;fontColor=#f9a825;fontSize=9;" edge="1" parent="1" source="fgt_act" target="fgt_pas">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="460" y="180"/><mxPoint x="680" y="180"/></Array></mxGeometry>
         </mxCell>
 
-        <!-- HA SESSION SYNC -->
         <mxCell id="ha_sync" value="Session Sync&#xa;(HA data link)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#cddc39;strokeWidth=2;dashed=1;fontColor=#cddc39;fontSize=9;" edge="1" parent="1" source="fgt_act" target="fgt_pas">
           <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="460" y="220"/><mxPoint x="680" y="220"/></Array></mxGeometry>
         </mxCell>
 
-        <!-- WAN switch / modem -->
         <mxCell id="wan_sw" value="WAN Switch / CPE&#xa;ISP router" style="sketch=0;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.cisco.routers.router;fillColor=#036897;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="490" y="120" width="60" height="60" as="geometry"/>
         </mxCell>
@@ -57,7 +51,6 @@
         <mxCell id="e_wan_act" value="port1 WAN" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="wan_sw" target="fgt_act"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_wan_pas" value="port1 WAN" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e53935;strokeWidth=2;dashed=1;fontColor=#e53935;fontSize=9;" edge="1" parent="1" source="wan_sw" target="fgt_pas"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- FORTISWITCH -->
         <mxCell id="fswA" value="FortiSwitch 248E&#xa;FortiLink Port&#xa;VLAN trunk จาก Active&#xa;MAC table sync" style="sketch=0;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.cisco.switches.layer_3_switch;fillColor=#2e7d32;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="300" y="360" width="64" height="64" as="geometry"/>
         </mxCell>
@@ -65,16 +58,13 @@
           <mxGeometry x="720" y="360" width="64" height="64" as="geometry"/>
         </mxCell>
 
-        <!-- FORTILINK EDGES -->
         <mxCell id="e_act_fswA" value="FortiLink&#xa;port5 (trunk)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="fgt_act" target="fswA"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_pas_fswB" value="FortiLink&#xa;port5 (trunk)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e53935;strokeWidth=2;dashed=1;fontColor=#e53935;fontSize=9;" edge="1" parent="1" source="fgt_pas" target="fswB"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- FAILOVER LABEL -->
         <mxCell id="failover_label" value="⚡ Failover &lt; 1s&#xa;Virtual MAC ย้ายไป Passive&#xa;Session table sync'd" style="text;html=1;strokeColor=#f9a825;fillColor=#1a1a0d;align=center;fontSize=10;fontColor=#f9a825;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="280" width="240" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- LAN ZONES -->
         <mxCell id="L_lan" value="Internal LAN — VLAN 10-50     Managed by FortiSwitch via FortiLink     Policy pushed from FortiGate active" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="280" y="490" width="520" height="100" as="geometry"/>
         </mxCell>
@@ -88,7 +78,6 @@
           <mxGeometry x="360" y="25" width="130" height="50" as="geometry"/>
         </mxCell>
 
-        <!-- FSW → LAN -->
         <mxCell id="e_fswA_lan" value="trunk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="fswA" target="L_lan"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e_fswB_lan" value="trunk" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;dashed=1;fontColor=#ff9800;fontSize=9;" edge="1" parent="1" source="fswB" target="L_lan"><mxGeometry relative="1" as="geometry"/></mxCell>
       </root>
@@ -133,6 +122,7 @@ flowchart TB
     end
 
     FAILOVER["⚡ Failover < 1 sec\nVirtual MAC moves to Passive\nSession table sync'd"]
+    FGT_ACT -.->|"⚡ triggers"| FAILOVER
 ```
 
 ---

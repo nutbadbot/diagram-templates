@@ -25,7 +25,6 @@
           <mxGeometry x="80" y="14" width="1000" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- CLIENT / CDN -->
         <mxCell id="L0" value="CLIENT / CDN" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="64" width="1160" height="110" as="geometry"/>
         </mxCell>
@@ -39,7 +38,6 @@
           <mxGeometry x="700" y="10" width="128" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- API GATEWAY / INGRESS -->
         <mxCell id="L1" value="API LAYER — Gateway + Load Balancer" style="swimlane;startSize=30;fillColor=#2d1a0e;strokeColor=#ff9800;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="204" width="1160" height="130" as="geometry"/>
         </mxCell>
@@ -53,7 +51,6 @@
           <mxGeometry x="980" y="20" width="70" height="70" as="geometry"/>
         </mxCell>
 
-        <!-- EKS CLUSTER -->
         <mxCell id="L2" value="EKS CLUSTER — us-east-1 (Multi-AZ)" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="364" width="1160" height="200" as="geometry"/>
         </mxCell>
@@ -79,7 +76,6 @@
           <mxGeometry x="60" y="148" width="1060" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- MESSAGING -->
         <mxCell id="L3" value="MESSAGING — Async Event Bus" style="swimlane;startSize=30;fillColor=#1a1030;strokeColor=#7c4dff;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="594" width="1160" height="110" as="geometry"/>
         </mxCell>
@@ -93,7 +89,6 @@
           <mxGeometry x="840" y="15" width="70" height="65" as="geometry"/>
         </mxCell>
 
-        <!-- DATA LAYER -->
         <mxCell id="L4" value="DATA LAYER — Polyglot Persistence" style="swimlane;startSize=30;fillColor=#0d1f2b;strokeColor=#0288d1;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="734" width="1160" height="140" as="geometry"/>
         </mxCell>
@@ -116,24 +111,20 @@
           <mxGeometry x="1060" y="20" width="70" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- Edges: Client → API -->
         <mxCell id="ec1" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="browser" target="cf"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ec2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="cf" target="apigw"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ec3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="r53" target="alb"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ec4" value="JWT Verify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;dashed=1;fontColor=#7c4dff;fontSize=9;" edge="1" parent="1" source="apigw" target="auth"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- API → Services -->
         <mxCell id="es1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="1" source="apigw" target="svc_user"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="es2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="1" source="alb" target="svc_order"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="es3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="1" source="alb" target="svc_search"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- Services → Messaging -->
         <mxCell id="em1" value="Async" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;fontColor=#7c4dff;fontSize=9;" edge="1" parent="1" source="svc_order" target="sqs"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="em2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;" edge="1" parent="1" source="svc_payment" target="sns"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="em3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;" edge="1" parent="1" source="sqs" target="svc_payment"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="em4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;" edge="1" parent="1" source="sns" target="svc_notify"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- Services → Data -->
         <mxCell id="ed1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0288d1;strokeWidth=2;" edge="1" parent="1" source="svc_user" target="rds"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ed2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#0288d1;strokeWidth=2;" edge="1" parent="1" source="svc_order" target="dynamo"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ed3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#e53935;strokeWidth=2;" edge="1" parent="1" source="svc_user" target="redis"><mxGeometry relative="1" as="geometry"/></mxCell>
@@ -183,6 +174,7 @@ flowchart TB
 
     BROWSER --> CF --> APIGW
     R53 --> ALB
+    APIGW -.->|"Verify JWT"| COGNITO
     APIGW & ALB --> US & OS & PS & NS & SS & FS
     OS --> SQS --> PS
     PS --> SNS --> NS

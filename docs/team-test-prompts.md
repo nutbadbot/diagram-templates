@@ -81,10 +81,10 @@
 ช่วยดู repo นี้ให้หน่อยครับ
 github.com/nutbadbot/diagram-templates
 
-มีไฟล์อะไรอยู่ใน templates/network-infrastructure/ บ้าง?
+มีไฟล์อะไรอยู่ใน templates/design/ บ้าง?
 ```
 
-**ผลที่ควรได้**: Claude แสดงรายการไฟล์ใน folder ได้
+**ผลที่ควรได้**: Claude แสดงรายการไฟล์ใน folder ได้ (ควรเห็น 13 ไฟล์)
 
 ❌ ถ้า Claude บอกว่า "เข้าไม่ได้" หรือ "ช่วย copy มาให้" → **ยังไม่ได้ต่อ GitHub connector** กลับไปทำ MANUAL.md Section 4 ก่อน
 

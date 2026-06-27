@@ -167,7 +167,7 @@ npm install -g @modelcontextprotocol/server-github
 
 ```
 ช่วยเพิ่ม template ใหม่ใน repo nutbadbot/diagram-templates
-- Path: templates/network-infrastructure/new-template.md
+- Path: templates/design/new-template.md
 - Content: [paste content]
 - Commit message: "Add: new network template"
 - Open Pull Request to main

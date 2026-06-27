@@ -10,8 +10,12 @@ examples/
 └── case-studies/    ← case ที่ใช้งานจริง (ลบข้อมูลลูกค้าแล้ว)
 ```
 
-## 🚧 ยังว่างอยู่
+## ไฟล์ที่มีอยู่
 
-หลังทีมทดลองใช้จริงแล้ว ค่อยเอาเคสมาใส่ที่นี่ (mask ข้อมูลลูกค้าออกก่อน)
+| ไฟล์ | เนื้อหา |
+|---|---|
+| [before-after/smb-rough-to-pragma.md](before-after/smb-rough-to-pragma.md) | แปลง rough sketch → Pragma Style diagram |
+| [case-studies/hospital-network-upgrade.md](case-studies/hospital-network-upgrade.md) | Case study: upgrade network โรงพยาบาล |
+| [case-studies/retail-multi-branch.md](case-studies/retail-multi-branch.md) | Case study: retail chain หลายสาขา |
 
-ดู [../docs/team-workflow-ideas.md](../docs/team-workflow-ideas.md) สำหรับไอเดีย experiment
+ดู [../docs/team-workflow-ideas.md](../docs/team-workflow-ideas.md) สำหรับไอเดีย experiment เพิ่มเติม

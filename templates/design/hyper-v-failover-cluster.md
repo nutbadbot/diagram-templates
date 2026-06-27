@@ -133,7 +133,7 @@ flowchart TB
             N2[Windows Server 2022\nHyper-V]
             VM3[VM: Ready to receive]
         end
-        NODE1 <-.Live Migration / Failover.-> NODE2
+        NODE1 <-.->|"Live Migration / Failover"| NODE2
     end
     subgraph STORAGE[Shared Storage - CSV]
         SAN[(SAN Array\nMD3820 / iSCSI)]

@@ -25,7 +25,6 @@
           <mxGeometry x="80" y="14" width="1000" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- MANAGEMENT GROUP HIERARCHY -->
         <mxCell id="L_mg" value="MANAGEMENT GROUP HIERARCHY" style="swimlane;startSize=30;fillColor=#1a1030;strokeColor=#7c4dff;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="64" width="1160" height="180" as="geometry"/>
         </mxCell>
@@ -45,7 +44,6 @@
         <mxCell id="mg_e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7c4dff;strokeWidth=2;" edge="1" parent="L_mg" source="mg_root" target="mg_landing"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="mg_e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="L_mg" source="mg_root" target="mg_sandbox"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- PLATFORM SUBSCRIPTIONS -->
         <mxCell id="L_plat" value="PLATFORM SUBSCRIPTIONS" style="swimlane;startSize=30;fillColor=#0d1f2b;strokeColor=#0288d1;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="274" width="1160" height="160" as="geometry"/>
         </mxCell>
@@ -62,7 +60,6 @@
           <mxGeometry x="820" y="35" width="200" height="90" as="geometry"/>
         </mxCell>
 
-        <!-- HUB VNET -->
         <mxCell id="L_hub" value="HUB VNet (10.0.0.0/16) — Connectivity Subscription" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="464" width="1160" height="160" as="geometry"/>
         </mxCell>
@@ -82,7 +79,6 @@
           <mxGeometry x="980" y="35" width="128" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- SPOKE VNETS -->
         <mxCell id="L_spoke" value="SPOKE VNets — Landing Zone Subscriptions" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="654" width="1160" height="180" as="geometry"/>
         </mxCell>
@@ -99,7 +95,6 @@
           <mxGeometry x="840" y="35" width="200" height="120" as="geometry"/>
         </mxCell>
 
-        <!-- GOVERNANCE -->
         <mxCell id="L_gov" value="GOVERNANCE — Azure Policy + Defender + Monitor" style="swimlane;startSize=30;fillColor=#1a1a1a;strokeColor=#424242;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="864" width="1160" height="110" as="geometry"/>
         </mxCell>
@@ -119,7 +114,6 @@
           <mxGeometry x="1000" y="30" width="100" height="55" as="geometry"/>
         </mxCell>
 
-        <!-- Hub–Spoke Peering -->
         <mxCell id="pe1" value="VNet Peering" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="hub_fw" target="spoke_prod"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="pe2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2e7d32;strokeWidth=2;" edge="1" parent="1" source="hub_fw" target="spoke_nonprod"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="pe3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;" edge="1" parent="1" source="hub_fw" target="spoke_dmz"><mxGeometry relative="1" as="geometry"/></mxCell>

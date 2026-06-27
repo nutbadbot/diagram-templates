@@ -24,7 +24,6 @@
           <mxGeometry x="100" y="20" width="900" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- HOSTS -->
         <mxCell id="L_hosts" value="iSCSI Initiators — Hosts     MPIO: 4 paths per host (2 NIC × 2 Controller port)" style="swimlane;startSize=30;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="80" width="1020" height="140" as="geometry"/>
         </mxCell>
@@ -38,32 +37,26 @@
           <mxGeometry x="580" y="30" width="200" height="85" as="geometry"/>
         </mxCell>
 
-        <!-- FABRIC A -->
         <mxCell id="fabA" value="iSCSI Fabric A&#xa;10GbE Switch A&#xa;VLAN 50 — 10.50.10.0/24&#xa;Dedicated (no other traffic)" style="sketch=0;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.cisco.switches.workgroup_switch;fillColor=#8b3a0f;strokeColor=#ff9800;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="220" y="300" width="64" height="64" as="geometry"/>
         </mxCell>
 
-        <!-- FABRIC B -->
         <mxCell id="fabB" value="iSCSI Fabric B&#xa;10GbE Switch B&#xa;VLAN 51 — 10.50.20.0/24&#xa;Dedicated (no other traffic)" style="sketch=0;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;shape=mxgraph.cisco.switches.workgroup_switch;fillColor=#8b3a0f;strokeColor=#ff9800;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="820" y="300" width="64" height="64" as="geometry"/>
         </mxCell>
 
-        <!-- CONTROLLER A -->
         <mxCell id="ctlA" value="Controller A (Primary)&#xa;Dell ME5224&#xa;iSCSI Port A0: 10.50.10.200&#xa;iSCSI Port A1: 10.50.20.200&#xa;Cache: 8 GB Write-Back" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="280" y="480" width="220" height="100" as="geometry"/>
         </mxCell>
 
-        <!-- CONTROLLER B -->
         <mxCell id="ctlB" value="Controller B (Secondary)&#xa;Dell ME5224&#xa;iSCSI Port B0: 10.50.10.201&#xa;iSCSI Port B1: 10.50.20.201&#xa;Cache: 8 GB Write-Back" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a4a1a;strokeColor=#66bb6a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="600" y="480" width="220" height="100" as="geometry"/>
         </mxCell>
 
-        <!-- CACHE MIRROR -->
         <mxCell id="cache_link" value="Cache Mirror&#xa;(dedicated link)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=3;fontColor=#66bb6a;fontSize=9;" edge="1" parent="1" source="ctlA" target="ctlB">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- DISK ENCLOSURE -->
         <mxCell id="L_disks" value="Disk Enclosure — Dell ME5224     24× 2.5&quot; SAS/SSD     RAID Groups: VD1 (RAID-5 DB), VD2 (RAID-6 Backup)" style="swimlane;startSize=30;fillColor=#1a1a0d;strokeColor=#f9a825;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="280" y="640" width="540" height="100" as="geometry"/>
         </mxCell>
@@ -77,17 +70,14 @@
           <mxGeometry x="430" y="30" width="90" height="45" as="geometry"/>
         </mxCell>
 
-        <!-- MPIO PATHS — HOST1 -->
         <mxCell id="p1_fabA" value="Path 1A (NIC A→FabA→CtlA)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;fontColor=#ff9800;fontSize=8;" edge="1" parent="1" source="host1" target="fabA"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="p1_fabB" value="Path 1B (NIC B→FabB→CtlA)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;dashed=1;fontColor=#ff9800;fontSize=8;" edge="1" parent="1" source="host1" target="fabB"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- FABRIC → CONTROLLERS -->
         <mxCell id="fA_ctlA" value="Port A0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f9a825;strokeWidth=2;fontColor=#f9a825;fontSize=9;" edge="1" parent="1" source="fabA" target="ctlA"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="fA_ctlB" value="Port B0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f9a825;strokeWidth=2;dashed=1;fontColor=#f9a825;fontSize=9;" edge="1" parent="1" source="fabA" target="ctlB"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="fB_ctlA" value="Port A1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f9a825;strokeWidth=2;dashed=1;fontColor=#f9a825;fontSize=9;" edge="1" parent="1" source="fabB" target="ctlA"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="fB_ctlB" value="Port B1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#f9a825;strokeWidth=2;fontColor=#f9a825;fontSize=9;" edge="1" parent="1" source="fabB" target="ctlB"><mxGeometry relative="1" as="geometry"/></mxCell>
 
-        <!-- CONTROLLERS → DISKS -->
         <mxCell id="ctlA_disk" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=3;" edge="1" parent="1" source="ctlA" target="L_disks"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="ctlB_disk" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#66bb6a;strokeWidth=3;" edge="1" parent="1" source="ctlB" target="L_disks"><mxGeometry relative="1" as="geometry"/></mxCell>
       </root>

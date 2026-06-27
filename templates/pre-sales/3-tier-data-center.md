@@ -129,13 +129,13 @@ flowchart TB
     subgraph SEC[SECURITY LAYER — Firewall HA Pair]
         FW1["Firewall Primary\nActive"]
         FW2["Firewall Secondary\nStandby"]
-        FW1 <-- "HA" --> FW2
+        FW1 <-->|HA| FW2
     end
 
     subgraph CORE[CORE LAYER — L3 Switch HSRP/VRRP]
         C1["Core Switch 1\nCisco Nexus 9500"]
         C2["Core Switch 2\nCisco Nexus 9500"]
-        C1 <-- "HSRP" --> C2
+        C1 <-->|HSRP| C2
     end
 
     subgraph DIST[DISTRIBUTION LAYER — L3 Switch]

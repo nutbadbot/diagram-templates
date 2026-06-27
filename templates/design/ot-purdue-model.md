@@ -214,7 +214,9 @@ flowchart TB
 
     CORP & EDGE --> OTFW
     REMOTE -->|VPN Tunnel| VPN --> OTFW
-    OTFW -->|Controlled Access| L3SW & JUMP
+    OTFW -->|Controlled Access| L3SW & JUMP & PROXY
+    PROXY --> L3SW
+    DMZSVC -.->|"DNS/NTP/Syslog"| L3SW
     JUMP -->|Privileged Session| SCADA & EWS
     PAM -->|PAM Session| EWS
     L3SW --> SCADA & OPC & NETMGMT

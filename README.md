@@ -130,7 +130,7 @@ diagram-templates/
 │   ├── setup-project.md              ← setup repo + project settings
 │   ├── team-test-prompts.md          ← prompt ชุดทดสอบสำหรับทีม
 │   ├── team-workflow-ideas.md        ← framework งาน SI + Claude
-│   └── audit-report.md              ← ผลตรวจสอบ template 22 ไฟล์
+│   └── audit-report.md              ← ผลตรวจสอบ template 23 ไฟล์
 └── examples/
     ├── README.md                     ← index ตัวอย่าง
     ├── before-after/

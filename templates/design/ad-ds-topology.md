@@ -24,12 +24,10 @@
           <mxGeometry x="100" y="20" width="900" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- FOREST / DOMAIN LABEL -->
         <mxCell id="forest_label" value="Forest: pragma.local     Domain: pragma.local     Functional Level: Windows Server 2019" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontColor=#aaaaff;" vertex="1" parent="1">
           <mxGeometry x="100" y="65" width="900" height="25" as="geometry"/>
         </mxCell>
 
-        <!-- FSMO ROLES BOX -->
         <mxCell id="fsmo_box" value="FSMO Roles" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="100" width="1020" height="100" as="geometry"/>
         </mxCell>
@@ -49,7 +47,6 @@
           <mxGeometry x="740" y="25" width="240" height="50" as="geometry"/>
         </mxCell>
 
-        <!-- HQ SITE -->
         <mxCell id="L_hq" value="AD Site: HQ-Bangkok     Subnet: 10.10.0.0/16     Site Link: DEFAULTIPSITELINK" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="230" width="480" height="220" as="geometry"/>
         </mxCell>
@@ -63,7 +60,6 @@
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
-        <!-- BRANCH 1 -->
         <mxCell id="L_br1" value="AD Site: Branch-ChiangMai     Subnet: 10.20.0.0/16     Site Link: HQ-CM-SITELINK" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="230" width="480" height="220" as="geometry"/>
         </mxCell>
@@ -71,7 +67,6 @@
           <mxGeometry x="150" y="50" width="180" height="130" as="geometry"/>
         </mxCell>
 
-        <!-- DNS ZONE -->
         <mxCell id="L_dns" value="DNS — AD-Integrated Zone     Primary: pragma.local     Replication: All DCs in Domain" style="swimlane;startSize=30;fillColor=#1a1a0d;strokeColor=#f9a825;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="490" width="480" height="90" as="geometry"/>
         </mxCell>
@@ -79,7 +74,6 @@
           <mxGeometry x="60" y="25" width="360" height="45" as="geometry"/>
         </mxCell>
 
-        <!-- SITE LINK -->
         <mxCell id="L_sitelink" value="Site Link: HQ-CM-SITELINK     Cost: 100     Replication Interval: 180 min     Schedule: 24×7" style="swimlane;startSize=30;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=11;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="490" width="480" height="90" as="geometry"/>
         </mxCell>
@@ -87,7 +81,6 @@
           <mxGeometry x="60" y="25" width="360" height="45" as="geometry"/>
         </mxCell>
 
-        <!-- REPLICATION EDGE cross-site -->
         <mxCell id="repl_cross" value="Inter-site Replication&#xa;(compressed, scheduled)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ce93d8;strokeWidth=2;dashed=1;fontColor=#ce93d8;fontSize=9;" edge="1" parent="1" source="dc02" target="dc03">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>

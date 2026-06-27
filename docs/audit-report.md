@@ -1,10 +1,10 @@
 # Audit Report — Diagram Templates
 
-> ตรวจสอบความครบถ้วนของ template 18 ไฟล์ตามมาตรฐาน repo
+> ตรวจสอบความครบถ้วนของ template 23 ไฟล์ตามมาตรฐาน repo
 
-**วันที่ audit**: 2026-06-27  
+**วันที่ audit**: 2026-06-27 (อัปเดต 2026-06-27 เพิ่ม 5 templates ใหม่)  
 **ผู้ตรวจ**: Claude (Cowork mode)  
-**ไฟล์ที่ตรวจ**: templates/pre-sales/ (7), templates/design/ (8), templates/handover/ (3)
+**ไฟล์ที่ตรวจ**: templates/pre-sales/ (7), templates/design/ (13), templates/handover/ (3)
 
 ---
 
@@ -12,8 +12,8 @@
 
 | หัวข้อ | สถานะ |
 |---|---|
-| Template ทั้งหมด | 18 ไฟล์ |
-| ผ่านครบทุก section | **7 ไฟล์** |
+| Template ทั้งหมด | 23 ไฟล์ |
+| ผ่านครบทุก section | **12 ไฟล์** |
 | มี section ขาด | **11 ไฟล์** |
 | Section ที่ขาดบ่อยที่สุด | อัพเดตล่าสุด (11 ไฟล์) |
 
@@ -42,6 +42,11 @@
 | voip-deployment.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | backup-architecture.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | rack-elevation-42u.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| vsan-cluster.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| ad-ds-topology.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| iscsi-san-multipath.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| fortigate-ha.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| ot-purdue-model.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **handover/** | | | | | | | | | |
 | approval-workflow.md | ✅ | ✅ | ✅ | ✅ | ❌ (1 แบบ) | ✅ | ✅ | ✅ | ❌ |
 | cicd-pipeline.md | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -87,13 +92,18 @@
 
 ---
 
-## ไฟล์ที่ผ่านครบทุก section (7 ไฟล์)
+## ไฟล์ที่ผ่านครบทุก section (12 ไฟล์)
 
 - templates/pre-sales/3-tier-web-app.md
 - templates/design/hyper-v-failover-cluster.md
 - templates/design/vlan-segmentation.md
 - templates/design/backup-architecture.md
 - templates/design/rack-elevation-42u.md
+- templates/design/vsan-cluster.md
+- templates/design/ad-ds-topology.md
+- templates/design/iscsi-san-multipath.md
+- templates/design/fortigate-ha.md
+- templates/design/ot-purdue-model.md
 - templates/handover/cicd-pipeline.md
 - templates/handover/incident-response.md
 

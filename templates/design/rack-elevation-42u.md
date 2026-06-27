@@ -25,17 +25,14 @@
           <mxGeometry x="60" y="20" width="400" height="35" as="geometry"/>
         </mxCell>
 
-        <!-- U RULER (left side) -->
         <mxCell id="ruler_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d0d1a;strokeColor=#333366;" vertex="1" parent="1">
           <mxGeometry x="40" y="60" width="30" height="840" as="geometry"/>
         </mxCell>
 
-        <!-- RACK FRAME -->
         <mxCell id="rack_frame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#4a4a88;strokeWidth=3;" vertex="1" parent="1">
           <mxGeometry x="70" y="60" width="360" height="840" as="geometry"/>
         </mxCell>
 
-        <!-- U labels 1-42 (every 5U) -->
         <mxCell id="u42" value="42" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="40" y="62" width="30" height="20" as="geometry"/></mxCell>
         <mxCell id="u40" value="40" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="40" y="102" width="30" height="20" as="geometry"/></mxCell>
         <mxCell id="u35" value="35" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="40" y="202" width="30" height="20" as="geometry"/></mxCell>
@@ -47,35 +44,27 @@
         <mxCell id="u5"  value="5"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="40" y="802" width="30" height="20" as="geometry"/></mxCell>
         <mxCell id="u1"  value="1"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="40" y="878" width="30" height="20" as="geometry"/></mxCell>
 
-        <!-- ===== DEVICES (top to bottom = U42 to U1) ===== -->
-        <!-- Each U = 20px height. U42 starts at y=70 -->
 
-        <!-- U42: Cable Manager 1U -->
         <mxCell id="cm1" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="70" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U41: Patch Panel 1U -->
         <mxCell id="pp1" value="Patch Panel 24-port CAT6A  [U41]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a3a5c;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="90" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U40: Cable Manager 1U -->
         <mxCell id="cm2" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="110" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U39-38: Core Switch 2U -->
         <mxCell id="core_sw" value="Core Switch  [U38-39]&#xa;Cisco Catalyst 9500 / Dell N3248  —  10GbE Uplink" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="130" width="350" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- U37: Cable Manager -->
         <mxCell id="cm3" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="170" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U36-35: Firewall HA 1U x2 -->
         <mxCell id="fw1" value="Firewall — Primary  [U36]&#xa;FortiGate 200F / Palo Alto PA-450  Active" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d1a0e;strokeColor=#ff9800;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="190" width="350" height="20" as="geometry"/>
         </mxCell>
@@ -83,82 +72,66 @@
           <mxGeometry x="75" y="210" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U34: Cable Manager -->
         <mxCell id="cm4" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="230" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U33: Access Switch 1U -->
         <mxCell id="acc_sw1" value="Access Switch 1  [U33]  —  48x PoE+ 1GbE  Floor 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="250" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U32: Access Switch 2 -->
         <mxCell id="acc_sw2" value="Access Switch 2  [U32]  —  48x PoE+ 1GbE  Floor 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="270" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U31: Access Switch 3 -->
         <mxCell id="acc_sw3" value="Access Switch 3  [U31]  —  24x PoE+ 1GbE  Server Room" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#6a1b9a;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="290" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U30: Cable Manager -->
         <mxCell id="cm5" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="310" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U29-26: Server 1 — 4U -->
         <mxCell id="srv1" value="Server 1  [U26-29]&#xa;Dell PowerEdge R750  —  2x Xeon / 256GB RAM&#xa;Hyper-V Node 1 (NFI-HVC01)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d1a4a;strokeColor=#9c27b0;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="330" width="350" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U25-22: Server 2 — 4U -->
         <mxCell id="srv2" value="Server 2  [U22-25]&#xa;Dell PowerEdge R750  —  2x Xeon / 256GB RAM&#xa;Hyper-V Node 2 (NFI-HVC02)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a1a;strokeColor=#388e3c;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="410" width="350" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U21: Cable Manager -->
         <mxCell id="cm6" value="Cable Manager 1U" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="490" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U20-17: NAS / Storage — 4U -->
         <mxCell id="storage" value="Storage Array  [U17-20]&#xa;Dell MD3820 / PowerVault  —  SAS/iSCSI&#xa;Cluster Shared Volumes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a0d;strokeColor=#f9a825;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="510" width="350" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U16: KVM -->
         <mxCell id="kvm" value="KVM Switch 1U  [U16]  —  8-port  HDMI/USB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a1a;strokeColor=#424242;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="590" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U15: Backup Server -->
         <mxCell id="bkp" value="Backup Server  [U15]  —  Veeam B&amp;R / Commvault" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a0d;strokeColor=#ff9800;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="610" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U14-12: empty -->
         <mxCell id="empty1" value="— Empty  [U12-14] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="630" width="350" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U11: OOB Management -->
         <mxCell id="oob" value="OOB Management Switch  [U11]  —  iDRAC / iLO / IPMI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="690" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U10-8: empty -->
         <mxCell id="empty2" value="— Empty  [U8-10] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="710" width="350" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U7-5: UPS 3U -->
         <mxCell id="ups" value="UPS  [U5-7]&#xa;APC Smart-UPS 3000VA / Eaton 9PX&#xa;Runtime ~20 min @ full load" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1a0a;strokeColor=#ff6600;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="770" width="350" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U4-3: Cable Manager x2 -->
         <mxCell id="cm7" value="Cable Manager 1U  [U4]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="830" width="350" height="20" as="geometry"/>
         </mxCell>
@@ -166,12 +139,10 @@
           <mxGeometry x="75" y="850" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U2-1: PDU vertical (shown as 2U) -->
         <mxCell id="pdu" value="PDU  [U1-2]  —  Vertical / Horizontal  20A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#cc0000;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="75" y="870" width="350" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- LEGEND -->
         <mxCell id="leg_title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="460" y="70" width="200" height="20" as="geometry"/>
         </mxCell>
@@ -197,7 +168,6 @@
           <mxGeometry x="460" y="257" width="180" height="22" as="geometry"/>
         </mxCell>
 
-        <!-- SUMMARY BOX -->
         <mxCell id="sum_title" value="Rack Summary" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="460" y="310" width="200" height="20" as="geometry"/>
         </mxCell>
@@ -242,17 +212,14 @@
         <mxCell id="r_u5"  value="5"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="783" width="25" height="20" as="geometry"/></mxCell>
         <mxCell id="r_u1"  value="1"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="883" width="25" height="20" as="geometry"/></mxCell>
 
-        <!-- PDU A — VERTICAL BAR (LEFT, FEED A) -->
         <mxCell id="r_pduA" value="PDU A&#xa;Feed A&#xa;20A&#xa;IEC&#xa;C13&#xa;×16" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a0000;strokeColor=#cc0000;fontColor=#ff8888;fontSize=8;verticalAlign=top;align=center;" vertex="1" parent="1">
           <mxGeometry x="40" y="75" width="22" height="840" as="geometry"/>
         </mxCell>
 
-        <!-- RACK FRAME REAR -->
         <mxCell id="r_rack" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#4a4a88;strokeWidth=3;" vertex="1" parent="1">
           <mxGeometry x="67" y="75" width="356" height="840" as="geometry"/>
         </mxCell>
 
-        <!-- ZONE LABELS -->
         <mxCell id="r_zoneA" value="PSU 1 — Feed A" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#cc0000;" vertex="1" parent="1">
           <mxGeometry x="72" y="78" width="160" height="14" as="geometry"/>
         </mxCell>
@@ -260,32 +227,26 @@
           <mxGeometry x="246" y="78" width="172" height="14" as="geometry"/>
         </mxCell>
 
-        <!-- CENTER DIVIDER -->
         <mxCell id="r_div" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a2a44;strokeColor=#444488;" vertex="1" parent="1">
           <mxGeometry x="240" y="85" width="4" height="820" as="geometry"/>
         </mxCell>
 
-        <!-- PDU B — VERTICAL BAR (RIGHT, FEED B) -->
         <mxCell id="r_pduB" value="PDU B&#xa;Feed B&#xa;20A&#xa;IEC&#xa;C13&#xa;×16" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1000;strokeColor=#ff6600;fontColor=#ffaa55;fontSize=8;verticalAlign=top;align=center;" vertex="1" parent="1">
           <mxGeometry x="428" y="75" width="22" height="840" as="geometry"/>
         </mxCell>
 
-        <!-- U42: Cable Manager -->
         <mxCell id="r_cm1" value="Cable Manager 1U — Rear  [U42]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="85" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U41: Patch Panel rear (punch-down) -->
         <mxCell id="r_pp1" value="Patch Panel 24-port CAT6A — Rear (IDC Punch-down)  [U41]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="105" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U40: Cable Manager -->
         <mxCell id="r_cm2" value="Cable Manager 1U — Rear  [U40]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="125" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U39-38: Core Switch rear (2U) — DUAL PSU SPLIT -->
         <mxCell id="r_core_A" value="Core Switch  [U38-39]&#xa;PSU 1 → Feed A&#xa;Uplink SFP+ ×4  Stack-A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d2b1a;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="145" width="168" height="40" as="geometry"/>
         </mxCell>
@@ -293,12 +254,10 @@
           <mxGeometry x="244" y="145" width="174" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- U37: Cable Manager -->
         <mxCell id="r_cm3" value="Cable Manager 1U — Rear  [U37]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="185" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U36: FW Primary rear (1U) — DUAL PSU SPLIT -->
         <mxCell id="r_fw1_A" value="FW Primary  [U36]  PSU 1 → Feed A  WAN/LAN ports" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d1a0e;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="205" width="168" height="20" as="geometry"/>
         </mxCell>
@@ -306,7 +265,6 @@
           <mxGeometry x="244" y="205" width="174" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U35: FW Standby rear (1U) — DUAL PSU SPLIT -->
         <mxCell id="r_fw2_A" value="FW Standby  [U35]  PSU 1 → Feed A  WAN/LAN ports" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0e06;strokeColor=#cc0000;fontColor=#cc8888;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="225" width="168" height="20" as="geometry"/>
         </mxCell>
@@ -314,32 +272,26 @@
           <mxGeometry x="244" y="225" width="174" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U34: Cable Manager -->
         <mxCell id="r_cm4" value="Cable Manager 1U — Rear  [U34]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="245" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U33: Access SW1 rear (single PSU → Feed A) -->
         <mxCell id="r_acc1" value="Access Switch 1  [U33]  —  Uplink SFP+×2  Stack  PSU (Single) → Feed A  (Floor 1)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="265" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U32: Access SW2 -->
         <mxCell id="r_acc2" value="Access Switch 2  [U32]  —  Uplink SFP+×2  Stack  PSU (Single) → Feed A  (Floor 2)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="285" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U31: Access SW3 -->
         <mxCell id="r_acc3" value="Access Switch 3  [U31]  —  Uplink SFP+×2  Console  PSU (Single) → Feed A  (Server Room)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="305" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U30: Cable Manager -->
         <mxCell id="r_cm5" value="Cable Manager 1U — Rear  [U30]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="325" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U29-26: Server 1 rear (4U) — DUAL PSU SPLIT -->
         <mxCell id="r_srv1_A" value="Server 1  [U26-29]&#xa;Dell PowerEdge R750&#xa;PSU 1 — 750W&#xa;→ PDU A  Feed A&#xa;NIC 1/2 (10GbE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0505;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="345" width="168" height="80" as="geometry"/>
         </mxCell>
@@ -347,7 +299,6 @@
           <mxGeometry x="244" y="345" width="174" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U25-22: Server 2 rear (4U) — DUAL PSU SPLIT -->
         <mxCell id="r_srv2_A" value="Server 2  [U22-25]&#xa;Dell PowerEdge R750&#xa;PSU 1 — 750W&#xa;→ PDU A  Feed A&#xa;NIC 1/2 (10GbE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0505;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="425" width="168" height="80" as="geometry"/>
         </mxCell>
@@ -355,12 +306,10 @@
           <mxGeometry x="244" y="425" width="174" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U21: Cable Manager -->
         <mxCell id="r_cm6" value="Cable Manager 1U — Rear  [U21]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="505" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U20-17: Storage Array rear (4U) — DUAL PSU SPLIT -->
         <mxCell id="r_stor_A" value="Storage Array  [U17-20]&#xa;Dell MD3820 / PowerVault&#xa;PSU 1 → Feed A&#xa;SAS Host Port 0, 1&#xa;iSCSI Port A0 / A1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1000;strokeColor=#cc0000;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="525" width="168" height="80" as="geometry"/>
         </mxCell>
@@ -368,57 +317,46 @@
           <mxGeometry x="244" y="525" width="174" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- U16: KVM rear (single PSU) -->
         <mxCell id="r_kvm" value="KVM Switch 1U — Rear  [U16]  —  8x HDMI/USB  PSU (Single) → Feed A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a1a;strokeColor=#cc0000;fontColor=#aaaaaa;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="605" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U15: Backup Server rear (single PSU) -->
         <mxCell id="r_bkp" value="Backup Server — Rear  [U15]  —  PSU (Single) → Feed A  NIC 1GbE  iDRAC9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a0d;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="625" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U14-12: Empty -->
         <mxCell id="r_empty1" value="— Empty  [U12-14] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="645" width="346" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U11: OOB Mgmt Switch rear (single PSU) -->
         <mxCell id="r_oob" value="OOB Mgmt Switch — Rear  [U11]  —  Console ports iDRAC/iLO/IPMI  PSU (Single) → Feed A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a4a;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="705" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U10-8: Empty -->
         <mxCell id="r_empty2" value="— Empty  [U8-10] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="725" width="346" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U7-5: UPS rear (3U) -->
         <mxCell id="r_ups" value="UPS — Rear  [U5-7]  APC Smart-UPS 3000VA / Eaton 9PX&#xa;Battery maintenance port  |  Output: IEC C13×6, C19×2  |  Bypass input → PDU A + PDU B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1a0a;strokeColor=#ff6600;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="785" width="346" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- U4: Cable Manager -->
         <mxCell id="r_cm7" value="Cable Manager 1U — Rear  [U4]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="845" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U3: Cable Manager -->
         <mxCell id="r_cm8" value="Cable Manager 1U — Rear  [U3]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="72" y="865" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- U2-1: PDU reference note -->
         <mxCell id="r_pdu_ref" value="[U1-2] — Vertical PDU: ดูด้านข้าง Rack (PDU A ซ้าย / Feed A  |  PDU B ขวา / Feed B)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#cc0000;fontColor=#ff8888;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="72" y="885" width="346" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- HOT AISLE BANNER -->
         <mxCell id="r_hot" value="🔥 HOT AISLE — ลมร้อนออกจากหลัง Rack (Exhaust Air Out)" style="text;html=1;strokeColor=#cc3300;fillColor=#1a0800;rounded=1;align=center;fontSize=11;fontColor=#ff6600;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="67" y="920" width="356" height="22" as="geometry"/>
         </mxCell>
 
-        <!-- LEGEND -->
         <mxCell id="r_leg_title" value="Legend — Rear View" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="460" y="85" width="200" height="20" as="geometry"/>
         </mxCell>
@@ -441,7 +379,6 @@
           <mxGeometry x="460" y="245" width="200" height="22" as="geometry"/>
         </mxCell>
 
-        <!-- POWER FEED SUMMARY -->
         <mxCell id="r_sum_title" value="Power Feed Summary" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="460" y="295" width="200" height="20" as="geometry"/>
         </mxCell>

@@ -10,11 +10,11 @@
 
 Template ของคุณเข้าข่ายหมวดไหน?
 
-| หมวด | ตัวอย่าง |
+| หมวด (folder) | ใช้สำหรับ |
 |---|---|
-| `network-infrastructure/` | network topology, rack, firewall zone, SD-WAN, Hyper-V, backup, VLAN |
-| `system-architecture/` | microservices, 3-tier app, cloud (AWS/Azure/GCP) |
-| `process-flow/` | business workflow, approval, CI/CD pipeline |
+| `templates/pre-sales/` | SMB, 3-tier data center, SD-WAN, cloud architecture (AWS/Azure/GCP), microservices, serverless |
+| `templates/design/` | VLAN, firewall/DMZ, WiFi, rack elevation, Hyper-V, backup, AD DS, iSCSI, Spine-Leaf, OT/Purdue |
+| `templates/handover/` | approval workflow, CI/CD pipeline, incident response |
 
 ถ้าไม่เข้าหมวดไหนเลย เปิด Issue ถามก่อนครับ
 

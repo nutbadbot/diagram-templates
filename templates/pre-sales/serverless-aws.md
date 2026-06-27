@@ -25,7 +25,6 @@
           <mxGeometry x="80" y="14" width="960" height="40" as="geometry"/>
         </mxCell>
 
-        <!-- CLIENT / CDN -->
         <mxCell id="L0" value="CLIENT / CDN" style="swimlane;startSize=30;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="64" width="1100" height="110" as="geometry"/>
         </mxCell>
@@ -39,7 +38,6 @@
           <mxGeometry x="600" y="30" width="160" height="50" as="geometry"/>
         </mxCell>
 
-        <!-- AUTH / API -->
         <mxCell id="L1" value="AUTH + API LAYER" style="swimlane;startSize=30;fillColor=#2d1a0e;strokeColor=#ff9800;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="204" width="1100" height="130" as="geometry"/>
         </mxCell>
@@ -53,7 +51,6 @@
           <mxGeometry x="760" y="35" width="200" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- COMPUTE — LAMBDA -->
         <mxCell id="L2" value="COMPUTE — Serverless Functions (Lambda / Cloud Functions / Azure Functions)" style="swimlane;startSize=30;fillColor=#0d2b1a;strokeColor=#2e7d32;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="364" width="1100" height="170" as="geometry"/>
         </mxCell>
@@ -76,7 +73,6 @@
           <mxGeometry x="50" y="128" width="980" height="20" as="geometry"/>
         </mxCell>
 
-        <!-- MESSAGING -->
         <mxCell id="L3" value="MESSAGING + ORCHESTRATION" style="swimlane;startSize=30;fillColor=#1a1030;strokeColor=#7c4dff;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="564" width="1100" height="120" as="geometry"/>
         </mxCell>
@@ -90,7 +86,6 @@
           <mxGeometry x="660" y="30" width="190" height="60" as="geometry"/>
         </mxCell>
 
-        <!-- DATA LAYER -->
         <mxCell id="L4" value="DATA LAYER" style="swimlane;startSize=30;fillColor=#0d1f2b;strokeColor=#0288d1;fontColor=#ffffff;fontSize=13;fontStyle=1;html=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="714" width="1100" height="140" as="geometry"/>
         </mxCell>
@@ -110,7 +105,6 @@
           <mxGeometry x="920" y="20" width="80" height="80" as="geometry"/>
         </mxCell>
 
-        <!-- Edges -->
         <mxCell id="e1" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;fontColor=#4a90d9;fontSize=9;" edge="1" parent="1" source="browser" target="cdn"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4a90d9;strokeWidth=2;" edge="1" parent="1" source="cdn" target="s3_static"><mxGeometry relative="1" as="geometry"/></mxCell>
         <mxCell id="e3" value="JWT" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#ff9800;strokeWidth=2;fontColor=#ff9800;fontSize=9;" edge="1" parent="1" source="cdn" target="apigw"><mxGeometry relative="1" as="geometry"/></mxCell>
@@ -152,7 +146,7 @@ flowchart TB
     subgraph FN["Serverless Functions\nAuto-scale to zero"]
         FU[User Handler]
         FO[Order Handler]
-        FN[Notification\nAsync]
+        FNNOTIFY[Notification\nAsync]
         FP[Background\nProcessor]
         FS[Scheduled Job]
     end
@@ -173,7 +167,7 @@ flowchart TB
     CDN --> STATIC
     APIGW -.->|Verify JWT| AUTH
     APIGW --> FU & FO
-    FO -->|Async| EB --> SQ --> FN
+    FO -->|Async| EB --> SQ --> FNNOTIFY
     SF --> FP
     EB -->|Cron| FS
     FU --> DB & CH
