@@ -1,6 +1,6 @@
 # Rack Elevation 42U
 
-> Rack diagram มาตรฐาน 42U — แสดง front/rear view, U position, power, cable management
+> Rack diagram มาตรฐาน 42U — Front View + Rear View (Draw.io XML พร้อมทั้งคู่), U position, dual power feed A/B, cable management
 
 ## 📋 ใช้ตอนไหน
 
@@ -213,6 +213,250 @@
 
 ---
 
+## 🎨 Rear View (Draw.io XML)
+> มุมมองจากด้านหลัง (Hot Aisle Side) — แสดง dual power feed A/B, PSU split ซ้าย/ขวา, port หลัง switch, PDU vertical ซ้าย-ขวา
+
+```xml
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram name="42U Rack Elevation — Rear View">
+    <mxGraphModel dx="1400" dy="900" grid="0" background="#1a1a2e">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="r_title" value="42U Rack Elevation — Rear View (Hot Aisle Side)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=20;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="60" y="20" width="500" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_note" value="มุมมองจากด้านหลัง — PDU A (ซ้าย / Feed A) | PDU B (ขวา / Feed B) | PSU 1 → Feed A | PSU 2 → Feed B" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#aaaaff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="56" width="600" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_ruler_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d0d1a;strokeColor=#333366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="75" width="25" height="840" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_u42" value="42" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="83" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u40" value="40" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="123" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u35" value="35" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="223" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u30" value="30" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="323" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u25" value="25" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="423" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u20" value="20" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="523" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u15" value="15" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="623" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u10" value="10" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="723" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u5"  value="5"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="783" width="25" height="20" as="geometry"/></mxCell>
+        <mxCell id="r_u1"  value="1"  style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#888888;" vertex="1" parent="1"><mxGeometry x="10" y="883" width="25" height="20" as="geometry"/></mxCell>
+
+        <!-- PDU A — VERTICAL BAR (LEFT, FEED A) -->
+        <mxCell id="r_pduA" value="PDU A&#xa;Feed A&#xa;20A&#xa;IEC&#xa;C13&#xa;×16" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a0000;strokeColor=#cc0000;fontColor=#ff8888;fontSize=8;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="75" width="22" height="840" as="geometry"/>
+        </mxCell>
+
+        <!-- RACK FRAME REAR -->
+        <mxCell id="r_rack" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#4a4a88;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="67" y="75" width="356" height="840" as="geometry"/>
+        </mxCell>
+
+        <!-- ZONE LABELS -->
+        <mxCell id="r_zoneA" value="PSU 1 — Feed A" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=8;fontColor=#cc0000;" vertex="1" parent="1">
+          <mxGeometry x="72" y="78" width="160" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_zoneB" value="Feed B — PSU 2" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontSize=8;fontColor=#ff6600;" vertex="1" parent="1">
+          <mxGeometry x="246" y="78" width="172" height="14" as="geometry"/>
+        </mxCell>
+
+        <!-- CENTER DIVIDER -->
+        <mxCell id="r_div" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a2a44;strokeColor=#444488;" vertex="1" parent="1">
+          <mxGeometry x="240" y="85" width="4" height="820" as="geometry"/>
+        </mxCell>
+
+        <!-- PDU B — VERTICAL BAR (RIGHT, FEED B) -->
+        <mxCell id="r_pduB" value="PDU B&#xa;Feed B&#xa;20A&#xa;IEC&#xa;C13&#xa;×16" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1000;strokeColor=#ff6600;fontColor=#ffaa55;fontSize=8;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="428" y="75" width="22" height="840" as="geometry"/>
+        </mxCell>
+
+        <!-- U42: Cable Manager -->
+        <mxCell id="r_cm1" value="Cable Manager 1U — Rear  [U42]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="85" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U41: Patch Panel rear (punch-down) -->
+        <mxCell id="r_pp1" value="Patch Panel 24-port CAT6A — Rear (IDC Punch-down)  [U41]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a4a;strokeColor=#4a90d9;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="105" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U40: Cable Manager -->
+        <mxCell id="r_cm2" value="Cable Manager 1U — Rear  [U40]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="125" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U39-38: Core Switch rear (2U) — DUAL PSU SPLIT -->
+        <mxCell id="r_core_A" value="Core Switch  [U38-39]&#xa;PSU 1 → Feed A&#xa;Uplink SFP+ ×4  Stack-A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d2b1a;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="145" width="168" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_core_B" value="Core Switch  [U38-39]&#xa;PSU 2 → Feed B&#xa;Console  Mgmt  Stack-B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0d2b1a;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="145" width="174" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- U37: Cable Manager -->
+        <mxCell id="r_cm3" value="Cable Manager 1U — Rear  [U37]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="185" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U36: FW Primary rear (1U) — DUAL PSU SPLIT -->
+        <mxCell id="r_fw1_A" value="FW Primary  [U36]  PSU 1 → Feed A  WAN/LAN ports" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d1a0e;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="205" width="168" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_fw1_B" value="FW Primary  [U36]  PSU 2 → Feed B  HA/Console" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d1a0e;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="205" width="174" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U35: FW Standby rear (1U) — DUAL PSU SPLIT -->
+        <mxCell id="r_fw2_A" value="FW Standby  [U35]  PSU 1 → Feed A  WAN/LAN ports" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0e06;strokeColor=#cc0000;fontColor=#cc8888;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="225" width="168" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_fw2_B" value="FW Standby  [U35]  PSU 2 → Feed B  HA/Console" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0e06;strokeColor=#ff6600;fontColor=#cc8844;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="225" width="174" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U34: Cable Manager -->
+        <mxCell id="r_cm4" value="Cable Manager 1U — Rear  [U34]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="245" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U33: Access SW1 rear (single PSU → Feed A) -->
+        <mxCell id="r_acc1" value="Access Switch 1  [U33]  —  Uplink SFP+×2  Stack  PSU (Single) → Feed A  (Floor 1)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="265" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U32: Access SW2 -->
+        <mxCell id="r_acc2" value="Access Switch 2  [U32]  —  Uplink SFP+×2  Stack  PSU (Single) → Feed A  (Floor 2)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="285" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U31: Access SW3 -->
+        <mxCell id="r_acc3" value="Access Switch 3  [U31]  —  Uplink SFP+×2  Console  PSU (Single) → Feed A  (Server Room)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="305" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U30: Cable Manager -->
+        <mxCell id="r_cm5" value="Cable Manager 1U — Rear  [U30]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="325" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U29-26: Server 1 rear (4U) — DUAL PSU SPLIT -->
+        <mxCell id="r_srv1_A" value="Server 1  [U26-29]&#xa;Dell PowerEdge R750&#xa;PSU 1 — 750W&#xa;→ PDU A  Feed A&#xa;NIC 1/2 (10GbE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0505;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="345" width="168" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_srv1_B" value="Server 1  [U26-29]&#xa;Dell PowerEdge R750&#xa;PSU 2 — 750W&#xa;→ PDU B  Feed B&#xa;iDRAC9  PCIe slots" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0c00;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="345" width="174" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- U25-22: Server 2 rear (4U) — DUAL PSU SPLIT -->
+        <mxCell id="r_srv2_A" value="Server 2  [U22-25]&#xa;Dell PowerEdge R750&#xa;PSU 1 — 750W&#xa;→ PDU A  Feed A&#xa;NIC 1/2 (10GbE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0505;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="425" width="168" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_srv2_B" value="Server 2  [U22-25]&#xa;Dell PowerEdge R750&#xa;PSU 2 — 750W&#xa;→ PDU B  Feed B&#xa;iDRAC9  PCIe slots" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0c00;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="425" width="174" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- U21: Cable Manager -->
+        <mxCell id="r_cm6" value="Cable Manager 1U — Rear  [U21]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="505" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U20-17: Storage Array rear (4U) — DUAL PSU SPLIT -->
+        <mxCell id="r_stor_A" value="Storage Array  [U17-20]&#xa;Dell MD3820 / PowerVault&#xa;PSU 1 → Feed A&#xa;SAS Host Port 0, 1&#xa;iSCSI Port A0 / A1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1000;strokeColor=#cc0000;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="525" width="168" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_stor_B" value="Storage Array  [U17-20]&#xa;Dell MD3820 / PowerVault&#xa;PSU 2 → Feed B&#xa;SAS Host Port 2, 3&#xa;iSCSI Port B0 / B1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1000;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="244" y="525" width="174" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- U16: KVM rear (single PSU) -->
+        <mxCell id="r_kvm" value="KVM Switch 1U — Rear  [U16]  —  8x HDMI/USB  PSU (Single) → Feed A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a1a;strokeColor=#cc0000;fontColor=#aaaaaa;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="605" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U15: Backup Server rear (single PSU) -->
+        <mxCell id="r_bkp" value="Backup Server — Rear  [U15]  —  PSU (Single) → Feed A  NIC 1GbE  iDRAC9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a0d;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="625" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U14-12: Empty -->
+        <mxCell id="r_empty1" value="— Empty  [U12-14] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="645" width="346" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- U11: OOB Mgmt Switch rear (single PSU) -->
+        <mxCell id="r_oob" value="OOB Mgmt Switch — Rear  [U11]  —  Console ports iDRAC/iLO/IPMI  PSU (Single) → Feed A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a2a4a;strokeColor=#cc0000;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="705" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U10-8: Empty -->
+        <mxCell id="r_empty2" value="— Empty  [U8-10] —" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="725" width="346" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- U7-5: UPS rear (3U) -->
+        <mxCell id="r_ups" value="UPS — Rear  [U5-7]  APC Smart-UPS 3000VA / Eaton 9PX&#xa;Battery maintenance port  |  Output: IEC C13×6, C19×2  |  Bypass input → PDU A + PDU B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1a0a;strokeColor=#ff6600;fontColor=#ffffff;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="785" width="346" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- U4: Cable Manager -->
+        <mxCell id="r_cm7" value="Cable Manager 1U — Rear  [U4]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="845" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U3: Cable Manager -->
+        <mxCell id="r_cm8" value="Cable Manager 1U — Rear  [U3]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#888888;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="72" y="865" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- U2-1: PDU reference note -->
+        <mxCell id="r_pdu_ref" value="[U1-2] — Vertical PDU: ดูด้านข้าง Rack (PDU A ซ้าย / Feed A  |  PDU B ขวา / Feed B)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0a0a;strokeColor=#cc0000;fontColor=#ff8888;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="72" y="885" width="346" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- HOT AISLE BANNER -->
+        <mxCell id="r_hot" value="🔥 HOT AISLE — ลมร้อนออกจากหลัง Rack (Exhaust Air Out)" style="text;html=1;strokeColor=#cc3300;fillColor=#1a0800;rounded=1;align=center;fontSize=11;fontColor=#ff6600;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="67" y="920" width="356" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- LEGEND -->
+        <mxCell id="r_leg_title" value="Legend — Rear View" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="460" y="85" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_A" value="PSU 1 — Feed A (PDU A)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0505;strokeColor=#cc0000;fontColor=#ffaaaa;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="110" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_B" value="PSU 2 — Feed B (PDU B)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e0c00;strokeColor=#ff6600;fontColor=#ffcc88;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="137" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_s" value="Single PSU → Feed A only" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a0d2b;strokeColor=#cc0000;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="164" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_cm" value="Cable Manager / Tray" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#555577;fontColor=#aaaaaa;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="191" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_pwr" value="UPS / Power Infrastructure" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2a1a0a;strokeColor=#ff6600;fontColor=#ffffff;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="218" width="200" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_leg_e" value="Empty / Available" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#111122;strokeColor=#333344;fontColor=#444466;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="460" y="245" width="200" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- POWER FEED SUMMARY -->
+        <mxCell id="r_sum_title" value="Power Feed Summary" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="460" y="295" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="r_summary" value="PDU A (Feed A)&#xa;→ Server 1 PSU1&#xa;→ Server 2 PSU1&#xa;→ Storage PSU1&#xa;→ Core Sw PSU1&#xa;→ FW Primary PSU1&#xa;→ FW Standby PSU1&#xa;→ Access SW ×3&#xa;→ KVM, OOB, Backup&#xa;&#xa;PDU B (Feed B)&#xa;→ Server 1 PSU2&#xa;→ Server 2 PSU2&#xa;→ Storage PSU2&#xa;→ Core Sw PSU2&#xa;→ FW Primary PSU2&#xa;→ FW Standby PSU2&#xa;&#xa;UPS Output → PDU A + PDU B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d0d1a;strokeColor=#333366;fontColor=#aaaaaa;fontSize=9;align=left;spacingLeft=6;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="460" y="320" width="200" height="270" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+```
+
+---
+
 ## 🌊 Mermaid Template (Quick Reference)
 
 ```mermaid
@@ -287,6 +531,28 @@ github.com/nutbadbot/diagram-templates
 - PDU: 2U vertical
 ```
 
+### แบบ D: Rear View / Power Feed A-B
+```
+ช่วยหา template rack-elevation-42u.md Rear View XML จาก
+github.com/nutbadbot/diagram-templates
+สร้าง Rear View สำหรับ [ชื่อลูกค้า]:
+
+Dual PSU devices (Feed A / Feed B):
+- Server 1: [hostname]  PSU1 → [PDU A model], PSU2 → [PDU B model]
+- Server 2: [hostname]  PSU1 → [PDU A], PSU2 → [PDU B]
+- Storage: [model]  PSU1 → [PDU A], PSU2 → [PDU B]
+- Firewall HA: [model]  PSU1 → [PDU A], PSU2 → [PDU B]
+- Core Switch: [model]  PSU1 → [PDU A], PSU2 → [PDU B]
+
+Single PSU devices (Feed A only):
+- Access SW ×[จำนวน] → Feed A
+- OOB Switch, KVM, Backup Server → Feed A
+
+PDU A (Feed A): [ยี่ห้อ/model, 20A หรือ 30A, IEC outlet จำนวน]
+PDU B (Feed B): [ยี่ห้อ/model, 20A หรือ 30A, IEC outlet จำนวน]
+UPS: [model] → bypass ไปทั้งสอง PDU
+```
+
 ---
 
 ## 🔧 Parameters ที่ปรับได้
@@ -297,7 +563,7 @@ github.com/nutbadbot/diagram-templates
 | Server size | 4U (2S) | 1U (dense), 2U, 4U |
 | Firewall | 1U per unit | 2U (high-end) |
 | UPS | 3U | 2U, 5U |
-| View | Front | Rear, Both |
+| View | Front + Rear (XML พร้อมทั้งคู่) | เปิดใช้ทีละ diagram ใน Draw.io |
 | Cable color | — | เพิ่ม color code ตาม VLAN |
 
 ---
@@ -311,10 +577,13 @@ github.com/nutbadbot/diagram-templates
 - **Cooling**: Front-to-Back airflow — servers หน้า cold aisle, หลัง hot aisle
 - **Weight**: server 4U ≈ 25-35 kg, ตรวจ floor load capacity ก่อน
 - **Empty U**: เพิ่ม blanking panel ทุก empty U เพื่อ airflow
+- **Dual Power Feed A/B**: server/storage/firewall/core switch ต้องมี PSU 1 → PDU A (Feed A) และ PSU 2 → PDU B (Feed B) — ป้องกัน single PDU failure ทำให้ device ดับ
+- **Hot Aisle / Cold Aisle**: cold aisle = หน้า rack (cold air intake), hot aisle = หลัง rack (exhaust air out) — Rear View diagram แสดงฝั่ง hot aisle
+- **Single PSU devices**: Access switch, KVM, OOB มักมี single PSU — ถ้ามีหลาย unit ในกลุ่มเดียวให้สลับ Feed A/B ระหว่าง device แต่ละตัวเพื่อกระจาย load
 
 ### Related Templates
 - Network topology → `3-tier-data-center.md`
 - Virtualization → `hyper-v-failover-cluster.md`
 - Backup → `backup-architecture.md`
 
-**อัพเดตล่าสุด**: 2026-05-07 — initial template
+**อัพเดตล่าสุด**: 2026-06-27 — เพิ่ม Rear View + dual power feed A/B

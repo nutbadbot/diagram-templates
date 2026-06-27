@@ -162,7 +162,7 @@ Claude คือ AI ผู้ช่วย (เหมือน ChatGPT) ของ
 
 ```
 ช่วยดู repo github.com/nutbadbot/diagram-templates
-มีไฟล์อะไรบ้างใน templates/network-infrastructure/
+มีไฟล์อะไรบ้างใน templates/design/
 ```
 
 ถ้า Claude ตอบและแสดงรายการไฟล์ได้ = ✅ สำเร็จ
