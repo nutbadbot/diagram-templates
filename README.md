@@ -72,7 +72,7 @@ Claude จะหา template เอง → ปรับตาม spec → สร
 | [ad-ds-topology.md](templates/design/ad-ds-topology.md) | Active Directory DS, DC multi-site, FSMO, replication, DNS | ✅ |
 | [iscsi-san-multipath.md](templates/design/iscsi-san-multipath.md) | iSCSI SAN dual-controller, MPIO multipath, redundant fabric | ✅ |
 | [fortigate-ha.md](templates/design/fortigate-ha.md) | FortiGate HA Active-Passive, heartbeat, FortiLink, failover | ✅ |
-| [ot-purdue-model.md](templates/design/ot-purdue-model.md) | OT/ICS network ตาม Purdue Model — L0–L4 + Industrial DMZ, IEC 62443 | ✅ |
+| [ot-purdue-model.md](templates/design/ot-purdue-model.md) | OT/ICS network ตาม Purdue Model — L0–L4 + DMZ + auto-validate VLAN/Gateway/Level-skip | ✅ |
 
 ### 📦 Handover (3 templates)
 > ใช้ตอน as-built / SOP / process ส่งลูกค้าจบโปรเจกต์
